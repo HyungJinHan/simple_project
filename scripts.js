@@ -26,9 +26,9 @@ setInterval (() => {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    hours.innerHTML = h;
-    minutes.innerHTML = m;
-    seconds.innerHTML = s;
+    hours.innerHTML = h + "<br><span>Hours</span>";
+    minutes.innerHTML = m + "<br><span>Minutes</span>";
+    seconds.innerHTML = s + "<br><span>Seconds</span>";
     ampm.innerHTML = ap;
 
     hh.style.strokeDashoffset = 440 - (440 * h) / 12;
@@ -38,11 +38,11 @@ setInterval (() => {
     ss.style.strokeDashoffset = 440 - (440 * s) / 60;
     // 60초
 
-    hr_dot.style.transform = "rotate(${h * 30}deg)";
+    hr_dot.style.transform = `rotate(${h * 30}deg)`;
     // 360 / 12 = 30
-    min_dot.style.transform = "rotate(${m * 6}deg)";
+    min_dot.style.transform = `rotate(${m * 6}deg)`;
     // 360 / 60 = 6
-    sec_dot.style.transform = "rotate(${s * 6}deg)";
+    sec_dot.style.transform = `rotate(${s * 6}deg)`;
     // 360 / 60 = 6
 
 })
