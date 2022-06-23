@@ -1,0 +1,11 @@
+.table_intro {
+    height: 297mm;
+    width: 210mm;
+    text-align: center;
+    border-color: black;
+    background-color: white;
+}
+
+.table_intro th {
+    font-size: 30px;
+}
