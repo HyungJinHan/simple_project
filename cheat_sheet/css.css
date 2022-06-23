@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
+::selection {
+    color: #424242;
+    background-color: #bdbdbd;
+}
+
 * {
     font-family: 'Nanum Myeongjo', serif;
 }
@@ -23,6 +28,10 @@ a {
     font-weight: bolder;
 }
 
+.h1_article a {
+    color: white;
+}
+
 .h1_article {
     border: 1px solid;
     border-radius: 0.2em;
@@ -30,7 +39,7 @@ a {
     background-color: #424242;
     color: #ffffff;
     letter-spacing: 3px;
-    width: 70%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
@@ -51,6 +60,7 @@ a {
     margin-right: auto;
     width: 30%;
     font-size: larger;
+    letter-spacing: 2px;
 }
 
 #page_h2 .h2_article:hover {
@@ -129,6 +139,10 @@ a {
     border-radius: 0.2em;
     border-style: none;
     background-color: #bbbbbb;
+}
+
+.btn_next a {
+    color: black;
 }
 
 .btn_next:hover {
