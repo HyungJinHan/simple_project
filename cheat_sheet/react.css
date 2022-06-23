@@ -60,7 +60,7 @@ a {
     margin-right: auto;
     width: 30%;
     font-size: larger;
-    letter-spacing: 2px;
+    padding-bottom: 20px;
 }
 
 #page_h2 .h2_article:hover {
@@ -122,6 +122,10 @@ a {
     background-color: #bbbbbb;
 }
 
+.btn_prev a {
+    color: black;
+}
+
 .btn_prev:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
@@ -148,4 +152,36 @@ a {
 .btn_next:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+}
+
+#divs {
+    text-align: center;
+}
+
+.div_li1, .div_li3, .div_li4, .div_li5, .div_li6 {
+    border: #424242;
+    background-color: #424242;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 0.2em;
+}
+
+.div_li2 {
+    background-color: #bbbbbb;
+    border: #bbbbbb;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 0.2em;
+    filter: drop-shadow(0 0 5px #424242)
+    drop-shadow(0 0 15px #6b6b6b)
+    drop-shadow(0 0 15px #a0a0a0);
 }
