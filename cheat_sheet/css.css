@@ -108,6 +108,15 @@ a {
     color: blue;
 }
 
+#page_f a:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #424242)
+    drop-shadow(0 0 20px #6b6b6b)
+    drop-shadow(0 0 20px #a0a0a0);
+}
+
 .btn_prev {
     position: fixed;
     left: 10px;

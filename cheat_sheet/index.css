@@ -81,21 +81,27 @@ a {
 .div1 {
     border: 3px solid #424242;
     background-color: #ffffff;
-    width: 95%;
+    width: 90%;
     height: 1000px;
     margin: 0 auto;
     margin-bottom: 50px;
     letter-spacing: 5px;
     font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .div2 {
     border: 3px solid #424242;
     background-color: #ffffff;
-    width: 95%;
+    width: 90%;
     height: 1000px;
     margin: 0 auto;
     margin-bottom: 50px;
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #page_f {
@@ -114,6 +120,16 @@ a {
     color: blue;
 }
 
+#page_f a:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #424242)
+    drop-shadow(0 0 20px #6b6b6b)
+    drop-shadow(0 0 20px #a0a0a0);
+}
+
+
 .btn_prev {
     position: fixed;
     left: 10px;
@@ -126,6 +142,10 @@ a {
     border-radius: 0.2em;
     border-style: none;
     background-color: #bbbbbb;
+}
+
+.btn_prev a {
+    color: black;
 }
 
 .btn_prev:hover {
