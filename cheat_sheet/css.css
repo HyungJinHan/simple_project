@@ -34,9 +34,11 @@ a {
 
 .h1_article {
     letter-spacing: 3px;
-    width: 70%;
+    width: 72%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 0.2em;
@@ -55,7 +57,6 @@ a {
     margin-right: auto;
     width: 30%;
     font-size: larger;
-    padding-bottom: 20px;
 }
 
 #page_h2 .h2_article:hover {
@@ -194,8 +195,8 @@ a {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    left: 9px;
-    top: 90px;
+    left: 49.2%;
+    top: 25%;
     font-size: 20px;
     font-weight: bolder;
     z-index: 2;
@@ -212,8 +213,8 @@ a {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    left: 9px;
-    top: 130px;
+    left: 49.2%;
+    top: 29%;
     font-size: 20px;
     font-weight: bolder;
     z-index: 2;
@@ -227,52 +228,6 @@ a {
 }
 
 .btn_down1:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 10px black;
-}
-
-.btn_up2 {
-    cursor: pointer;
-    border: none;
-    background-color: white;
-    border-radius: 0.2em;
-    position: fixed;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    right: 10px;
-    top: 90px;
-    font-size: 20px;
-    font-weight: bolder;
-    z-index: 2;
-    width: 30px;
-    height: 30px;
-}
-
-.btn_down2 {
-    cursor: pointer;
-    border: none;
-    background-color: white;
-    border-radius: 0.2em;
-    position: fixed;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    right: 10px;
-    top: 130px;
-    font-size: 20px;
-    font-weight: bolder;
-    z-index: 2;
-    width: 30px;
-    height: 30px;
-}
-
-.btn_up2:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 10px black;
-}
-
-.btn_down2:hover {
     transform: translateX(-1px) translateY(-0.5px);
     box-shadow: 5px 5px 10px black;
 }
