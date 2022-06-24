@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
+@media (max-width: 1730px) {
+    h1 {
+        display: none;
+    }
+}
+
 ::selection {
     color: #424242;
     background-color: #bdbdbd;
