@@ -137,7 +137,7 @@ a {
 .btn_prev {
     position: fixed;
     left: 10px;
-    top: 30px;
+    top: 10px;
     size: 100px;
     font-size: 18px;
     width: 150px;
@@ -160,7 +160,7 @@ a {
 .btn_next {
     position: fixed;
     right: 10px;
-    top: 30px;
+    top: 10px;
     size: 100px;
     font-size: 18px;
     width: 150px;
