@@ -94,16 +94,32 @@ a {
 
 .div1 {
     /* border: 3px solid #424242; */
-    width: 95%;
-    margin: 0 auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+.div1:hover {
+    transform: translateX(-10px) translateY(-5px);
+    box-shadow: 15px 15px 15px black;
+    transition-duration: 0.3s;
 }
 
 .div2 {
     /* border: 3px solid #424242; */
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 50px;
+    transition-duration: 0.3s;
+}
+
+.div2:hover {
+    transform: translateX(-10px) translateY(-5px);
+    box-shadow: 15px 15px 15px black;
+    transition-duration: 0.3s;
 }
 
 #page_f {
@@ -170,6 +186,7 @@ a {
 .btn_prev:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+    font-weight: bolder;
     transition-duration: 0.3s;
 }
 
@@ -195,6 +212,7 @@ a {
 .btn_next:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+    font-weight: bolder;
     transition-duration: 0.3s;
 }
 
@@ -202,13 +220,54 @@ a {
     text-align: center;
 }
 
-.p_li1, .p_li3, .p_li4, .p_li5, .p_li6 {
+.p_li1 a, .p_li3 a, .p_li4 a, .p_li5 a, .p_li6 a {
+    color: black;
+}
+
+.p_li3, .p_li1, .p_li4, .p_li5, .p_li6 {
     font-size: 20px;
     text-align: center;
     padding: 5px;
     display: inline-block;
+    border-radius: 0.2em;
     margin-left: 5px;
     margin-right: 5px;
+    transition-duration: 0.3s;
+}
+
+.p_li3:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li1:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li4:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li5:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li6:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
 }
 
 .p_li2 {

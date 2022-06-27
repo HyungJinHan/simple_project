@@ -32,16 +32,6 @@ a {
     text-decoration: none;
 }
 
-.scroll_line {
-    top: 0;
-    left: 0;
-    height: 10px;
-    position: fixed;
-    z-index: 10;
-    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background: #424242;
-}
-
 #page_h1 {
     text-align: center;
     border-top: 3px solid;
@@ -114,6 +104,13 @@ a {
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 0.5em;
+    transition-duration: 0.3s;
+}
+
+.div1:hover {
+    transform: translateX(-10px) translateY(-5px);
+    box-shadow: 15px 15px 15px black;
+    transition-duration: 0.3s;
 }
 
 .div2 {
@@ -128,6 +125,13 @@ a {
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 0.5em;
+    transition-duration: 0.3s;
+}
+
+.div2:hover {
+    transform: translateX(-10px) translateY(-5px);
+    box-shadow: 15px 15px 15px black;
+    transition-duration: 0.3s;
 }
 
 #page_f {
@@ -194,6 +198,7 @@ a {
 .btn_prev:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+    font-weight: bolder;
     transition-duration: 0.3s;
 }
 
@@ -219,6 +224,7 @@ a {
 .btn_next:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+    font-weight: bolder;
     transition-duration: 0.3s;
 }
 
@@ -226,13 +232,54 @@ a {
     text-align: center;
 }
 
+.p_li2 a, .p_li3 a, .p_li4 a, .p_li5 a, .p_li6 a {
+    color: black;
+}
+
 .p_li2, .p_li3, .p_li4, .p_li5, .p_li6 {
     font-size: 20px;
     text-align: center;
     padding: 5px;
     display: inline-block;
+    border-radius: 0.2em;
     margin-left: 5px;
     margin-right: 5px;
+    transition-duration: 0.3s;
+}
+
+.p_li2:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li3:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li4:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li5:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+.p_li6:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 5px 5px 5px black;
+    font-weight: bolder;
+    transition-duration: 0.3s;
 }
 
 .p_li1 {
@@ -343,6 +390,13 @@ a {
     border-radius: 0.5em;
     margin-top: 30px;
     margin-bottom: 30px;
+    transition-duration: 0.3s;
+}
+
+.div1 fieldset:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 10px 10px 10px black;
+    transition-duration: 0.3s;
 }
 
 .div2 .h2_field {
@@ -356,6 +410,13 @@ a {
     border-radius: 0.5em;
     margin-top: 30px;
     margin-bottom: 30px;
+    transition-duration: 0.3s;
+}
+
+.div2 fieldset:hover {
+    transform: translateX(-1px) translateY(-0.5px);
+    box-shadow: 10px 10px 10px black;
+    transition-duration: 0.3s;
 }
 
 .div1 fieldset p {
