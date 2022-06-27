@@ -4,6 +4,15 @@
     h1 {
         display: none;
     }
+
+    .btn_up1 {
+        display: none;
+    }
+
+    .btn_down1 {
+        display: none;
+    }
+
 }
 
 ::selection {
@@ -48,11 +57,13 @@ a {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 0.2em;
+    transition-duration: 0.3s;
 }
 
 #page_h1 .h1_article:hover {
     transform: translateX(-1px) translateY(-0.5px);
     box-shadow: 5px 5px 10px black;
+    transition-duration: 0.3s;
 }
 
 #page_h2 {
@@ -132,6 +143,7 @@ a {
     border-radius: 0.2em;
     border-style: none;
     background-color: white;
+    transition-duration: 0.3s;
 }
 
 .btn_prev a {
@@ -141,6 +153,7 @@ a {
 .btn_prev:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+    transition-duration: 0.3s;
 }
 
 .btn_next {
@@ -155,6 +168,7 @@ a {
     border-radius: 0.2em;
     border-style: none;
     background-color: white;
+    transition-duration: 0.3s;
 }
 
 .btn_next a {
@@ -164,6 +178,7 @@ a {
 .btn_next:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
+    transition-duration: 0.3s;
 }
 
 #divs {
@@ -208,6 +223,7 @@ a {
     z-index: 2;
     width: 30px;
     height: 30px;
+    transition-duration: 0.3s;
 }
 
 .btn_down1 {
@@ -220,20 +236,23 @@ a {
     margin-left: auto;
     margin-right: auto;
     left: 49.2%;
-    top: 29%;
+    bottom: 17%;
     font-size: 20px;
     font-weight: bolder;
     z-index: 2;
     width: 30px;
     height: 30px;
+    transition-duration: 0.3s;
 }
 
 .btn_up1:hover {
     transform: translateX(-1px) translateY(-0.5px);
     box-shadow: 5px 5px 10px black;
+    transition-duration: 0.3s;
 }
 
 .btn_down1:hover {
     transform: translateX(-1px) translateY(-0.5px);
     box-shadow: 5px 5px 10px black;
+    transition-duration: 0.3s;
 }

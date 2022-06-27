@@ -31,16 +31,6 @@ a {
     text-decoration: none;
 }
 
-.scroll_line {
-    top: 0;
-    left: 0;
-    height: 10px;
-    position: fixed;
-    z-index: 10;
-    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background: #424242;
-}
-
 #page_h1 {
     text-align: center;
     border-top: 3px solid;
@@ -143,7 +133,6 @@ a {
     padding-right: 10px;
     cursor: pointer;
     color: blue;
-    transition-duration: 0.3s;
 }
 
 #page_f a:hover {
@@ -153,7 +142,6 @@ a {
     filter: drop-shadow(0 0 5px #424242)
     drop-shadow(0 0 20px #6b6b6b)
     drop-shadow(0 0 20px #a0a0a0);
-    transition-duration: 0.3s;
 }
 
 .btn_prev {
@@ -261,7 +249,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     left: 49.2%;
-    bottom: 17%;
+    top: 29%;
     font-size: 20px;
     font-weight: bolder;
     z-index: 2;
@@ -371,7 +359,6 @@ a {
     font-weight: bolder;
     padding-left: 20px;
     padding-right: 20px;
-    transition-duration: 0.3s;
 }
 
 .p_a1:hover {
@@ -388,7 +375,6 @@ a {
     font-weight: bolder;
     padding-left: 20px;
     padding-right: 20px;
-    transition-duration: 0.3s;
 }
 
 .p_a2:hover {
@@ -399,21 +385,3 @@ a {
     drop-shadow(0 0 15px #a0a0a0);
     transition-duration: 0.3s;
 }
-/* 
-.dropdown {
-    position: relative;
-    text-align: center;
-    align-items: center;
-}
-
-.dropdown_content {
-    display: none;
-    position: relative;
-    z-index: 5;
-}
-
-.dropdown:hover .dropdown_content {
-    display: block;
-    position: relative;
-} */
-
