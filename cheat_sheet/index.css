@@ -20,6 +20,7 @@
 }
 
 * {
+    scroll-behavior: smooth;
     font-family: 'Nanum Myeongjo', serif;
 }
 
@@ -136,23 +137,38 @@ a {
     padding-bottom: 10px;
     width: 50%;
     margin: auto;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+
+#page_f p {
+    padding-bottom: 10px;
 }
 
 #page_f a {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     cursor: pointer;
-    color: blue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 0.3em;
     transition-duration: 0.3s;
 }
 
 #page_f a:hover {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     cursor: pointer;
-    filter: drop-shadow(0 0 5px #424242)
+    /* filter: drop-shadow(0 0 5px #424242)
     drop-shadow(0 0 20px #6b6b6b)
-    drop-shadow(0 0 20px #a0a0a0);
+    drop-shadow(0 0 20px #a0a0a0); */
+    transform: translateX(-2px) translateY(-1px);
+    box-shadow: 5px 5px 10px black;
     transition-duration: 0.3s;
 }
 
@@ -261,7 +277,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     left: 49.2%;
-    bottom: 17%;
+    bottom: 25%;
     font-size: 20px;
     font-weight: bolder;
     z-index: 2;
@@ -416,4 +432,3 @@ a {
     display: block;
     position: relative;
 } */
-
