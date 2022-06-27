@@ -142,11 +142,11 @@ a {
     width: 50%;
     margin: auto;
     margin-top: 30px;
-    font-weight: bolder;
 }
 
 #page_f p {
     padding-bottom: 10px;
+    font-weight: bolder;
 }
 
 #page_f a {
@@ -171,6 +171,7 @@ a {
     /* filter: drop-shadow(0 0 5px #424242)
     drop-shadow(0 0 20px #6b6b6b)
     drop-shadow(0 0 20px #a0a0a0); */
+    font-weight: bolder;
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
     transition-duration: 0.3s;
