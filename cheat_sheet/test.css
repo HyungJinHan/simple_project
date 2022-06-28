@@ -20,7 +20,6 @@
 }
 
 * {
-    scroll-behavior: smooth;
     font-family: 'Nanum Myeongjo', serif;
 }
 
@@ -49,7 +48,7 @@ a {
 
 .h1_article {
     letter-spacing: 3px;
-    width: 72%;
+    width: 73%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -93,31 +92,31 @@ a {
 }
 
 .div1 {
-    /* border: 3px solid #424242; */
+    border: 3px solid #424242;
+    background-color: #ffffff;
     width: 90%;
+    height: 1000px;
     margin: 0 auto;
     margin-bottom: 50px;
-    transition-duration: 0.3s;
-}
-
-.div1:hover {
-    transform: translateX(-10px) translateY(-5px);
-    box-shadow: 15px 15px 15px black;
-    transition-duration: 0.3s;
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0.5em;
 }
 
 .div2 {
-    /* border: 3px solid #424242; */
+    border: 3px solid #424242;
+    background-color: #ffffff;
     width: 90%;
+    height: 1000px;
     margin: 0 auto;
     margin-bottom: 50px;
-    transition-duration: 0.3s;
-}
-
-.div2:hover {
-    transform: translateX(-10px) translateY(-5px);
-    box-shadow: 15px 15px 15px black;
-    transition-duration: 0.3s;
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0.5em;
 }
 
 #page_f {
@@ -127,40 +126,22 @@ a {
     padding-bottom: 10px;
     width: 50%;
     margin: auto;
-    margin-top: 30px;
-}
-
-#page_f p {
-    padding-bottom: 10px;
-    font-weight: bolder;
 }
 
 #page_f a {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: black;
-    border-radius: 0.3em;
-    transition-duration: 0.3s;
+    color: blue;
 }
 
 #page_f a:hover {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
-    /* filter: drop-shadow(0 0 5px #424242)
+    filter: drop-shadow(0 0 5px #424242)
     drop-shadow(0 0 20px #6b6b6b)
-    drop-shadow(0 0 20px #a0a0a0); */
-    font-weight: bolder;
-    transform: translateX(-2px) translateY(-1px);
-    box-shadow: 5px 5px 10px black;
-    transition-duration: 0.3s;
+    drop-shadow(0 0 20px #a0a0a0);
 }
 
 .btn_prev {
@@ -185,7 +166,6 @@ a {
 .btn_prev:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
-    font-weight: bolder;
     transition-duration: 0.3s;
 }
 
@@ -211,65 +191,23 @@ a {
 .btn_next:hover {
     transform: translateX(-2px) translateY(-1px);
     box-shadow: 5px 5px 10px black;
-    font-weight: bolder;
     transition-duration: 0.3s;
 }
 
-#divs {
+.divs {
     text-align: center;
 }
 
-.p_li2 a, .p_li1 a, .p_li4 a, .p_li5 a, .p_li6 a {
-    color: black;
-}
-
-.p_li2, .p_li1, .p_li4, .p_li5, .p_li6 {
+.p_li2, .p_li3, .p_li4, .p_li5, .p_li6 {
     font-size: 20px;
     text-align: center;
     padding: 5px;
     display: inline-block;
-    border-radius: 0.2em;
     margin-left: 5px;
     margin-right: 5px;
-    transition-duration: 0.3s;
 }
 
-.p_li2:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 5px black;
-    font-weight: bolder;
-    transition-duration: 0.3s;
-}
-
-.p_li1:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 5px black;
-    font-weight: bolder;
-    transition-duration: 0.3s;
-}
-
-.p_li4:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 5px black;
-    font-weight: bolder;
-    transition-duration: 0.3s;
-}
-
-.p_li5:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 5px black;
-    font-weight: bolder;
-    transition-duration: 0.3s;
-}
-
-.p_li6:hover {
-    transform: translateX(-1px) translateY(-0.5px);
-    box-shadow: 5px 5px 5px black;
-    font-weight: bolder;
-    transition-duration: 0.3s;
-}
-
-.p_li3 {
+.p_li1 {
     font-size: 20px;
     text-align: center;
     padding: 5px;
@@ -311,7 +249,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     left: 49.2%;
-    bottom: 25%;
+    top: 29%;
     font-size: 20px;
     font-weight: bolder;
     z-index: 2;
@@ -332,38 +270,118 @@ a {
     transition-duration: 0.3s;
 }
 
-.tooltip .tooltip_text {
-    visibility: hidden;
-    width: 150px;
-    background-color: white;
+.container .div1 h1 {
+    transform: translateX(-1px) translateY(-0.5px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.container .div2 h1 {
+    transform: translateX(-1px) translateY(-0.5px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.container .div1 .h1_field .legend1 {
+    text-align: left;
+    transform: translateX(-1px) translateY(-0.5px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.container .div1 .h1_field .legend2 {
+    text-align: right;
+    transform: translateX(-1px) translateY(-0.5px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.container .div2 .h2_field .legend1 {
+    text-align: left;
+    transform: translateX(-1px) translateY(-0.5px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.container .div2 .h2_field .legend2 {
+    text-align: right;
+    transform: translateX(-1px) translateY(-0.5px);
+    text-shadow: 5px 5px 10px black;
+}
+
+.div1 .h1_field {
+    width: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.div1 fieldset {
+    height: 380px;
+    border-radius: 0.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.div2 .h2_field {
+    width: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.div2 fieldset {
+    height: 380px;
+    border-radius: 0.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.div1 fieldset p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.div2 fieldset p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.div1 fieldset p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.div2 fieldset p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.p_a1 {
     color: black;
-    text-align: center;
-    border-radius: 0.3em;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 5;
-    right: 35%;
-    top: 2149%;
-    letter-spacing: 1px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.tooltip:hover .tooltip_text {
-    opacity: 1;
-    transform: translateX(-2px) translateY(-1px);
-    box-shadow: 5px 5px 10px black;
+.p_a1:hover {
+    color: black;
+    font-weight: bolder;
+    filter: drop-shadow(0 0 5px #ffffff)
+    drop-shadow(0 0 15px #6b6b6b)
+    drop-shadow(0 0 15px #a0a0a0);
     transition-duration: 0.3s;
-    visibility: visible;
 }
 
-.tooltip .tooltip_text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
+.p_a2 {
+    color: black;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.p_a2:hover {
+    color: black;
+    font-weight: bolder;
+    filter: drop-shadow(0 0 5px #ffffff)
+    drop-shadow(0 0 15px #6b6b6b)
+    drop-shadow(0 0 15px #a0a0a0);
+    transition-duration: 0.3s;
 }
