@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
-@media (max-width: 1730px) {
+@media (max-width: 1400px) {
     h1 {
         display: none;
     }
@@ -506,7 +506,7 @@ a {
     position: absolute;
     z-index: 5;
     right: 35%;
-    top: 142%;
+    top: 1370px;
     letter-spacing: 1px;
     opacity: 0;
     transition: opacity 0.3s;
