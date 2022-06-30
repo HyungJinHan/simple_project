@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
-@media (max-width: 1730px) {
+/* @media (max-width: 1730px) {
     h1 {
         display: none;
     }
@@ -12,7 +12,7 @@
     .btn_down1 {
         display: none;
     }
-}
+} */
 
 ::selection {
     color: #424242;
@@ -344,11 +344,15 @@ a {
     padding: 5px 0;
     position: absolute;
     z-index: 5;
-    right: 35%;
-    top: 8745px;
+    left: 20%;
+    bottom: 120%;
     letter-spacing: 1px;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.tooltip {
+    position: relative;
 }
 
 .tooltip:hover .tooltip_text {
