@@ -5,7 +5,8 @@ import './App.css';
 
 function App() {
 
-  let [title, title_change] = useState('개발자 Blog 플랫폼 추천');
+  let [title, title_change] = useState(['개발자 Blog 플랫폼 추천', ' by.HyungJin']);
+  // state 문법은 변수 대신 쓰는 데이터 저장 공간으로 useState()를 이용해 사용
   // useState는 [state 데이터, state 데이터 변경 함수]로 쓰임
   // 변수를 array 형식으로 지정해야 함
 
@@ -33,11 +34,11 @@ function App() {
         <div style={posts_style}>React 연습 Blog</div>
         {/* style 지정도 가능 */}
       </div>
-      <img src={logo}/>
+      <img width={'50%'} src={logo}/>
       {/* 원하는 이미지를 import 해온 후, {}안에 이미지 이름을 지정 */}
       {/* 일반적인 html의 이미지명.jpg도 사용 가능 */}
       <div className='list'>
-        <h4 className={posts_article}>{title}</h4>
+        <h4 className={posts_article}>{title[0]}{title[1]}</h4>
         {/* className에도 변수 지정 가능 */}
         <p>2022.07.02 발행</p>
         <hr />
