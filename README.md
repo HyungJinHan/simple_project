@@ -7,3 +7,5 @@
 ## [Intro Chart](https://hyungjinhan.github.io/simple_project/intro_chart/intro.html)
 
 ## [Cheat Sheet Web](https://hyungjinhan.github.io/simple_project/cheat_sheet/index.html)
+
+## [Simple React Blog](https://hyungjinhan.github.io/simple_project/react_web/blog/public/index.html)
