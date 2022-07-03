@@ -35,13 +35,14 @@
 
 .black_h1 a:hover {
   color: yellow;
+  font-weight: bolder;
   transition-duration: 0.5s;
 }
 
 .lists {
   font-size: 20px;
   line-height: 50px;
-  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 .lists a {
@@ -51,6 +52,7 @@
 
 .lists a:hover {
   color: red;
+  font-weight: bolder;
   transition-duration: 0.5s;
 }
 
@@ -61,7 +63,87 @@
   padding-top: 10px;
   padding-bottom: 20px;
   margin:20px;
-  margin-top: 0;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  border-radius: 0.7em;
+  transition-duration: 0.5s;
+}
+
+.articles:hover {
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.create_btn {
+  color: black;
+  font-size: large;
+  transition-duration: 0.5s;
+}
+
+.create_btn:hover {
+  color: blue;
+  font-weight: bolder;
+  transition-duration: 0.5s;
+}
+
+.update_btn {
+  color: black;
+  font-size: large;
+  transition-duration: 0.5s;
+}
+
+.update_btn:hover {
+  color: blue;
+  font-weight: bolder;
+  transition-duration: 0.5s;
+}
+
+.create_input, .create_textarea {
+  background: #eee;
+  padding: 5px;
+  border-radius: 0.3em;
+  border: 0;
+  font-size: 20px;
+  transition-duration: 0.5s;
+  width: 90%;
+}
+
+.create_input:hover {
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.create_textarea:hover {
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.create_submit {
+  background: #eee;
+  padding: 5px;
+  border-radius: 0.3em;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  transition-duration: 0.5s;
+}
+
+.create_submit:hover {
+  font-weight: bolder;
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.create_article {
+  margin-left: 20px;
+}
+
+.btn_list {
+  line-height: 35px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
