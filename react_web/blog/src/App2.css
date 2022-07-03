@@ -7,27 +7,43 @@
   pointer-events: none;
 }
 
-.black_h1 {
+body {
+  font-family:
+  'nanumsqaure';
+}
+
+.black-nav {
   background: #282c34;
   width: 100%;
+  display: flex;
   color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.list {
+  margin-top: 30px;
+  text-align: left;
   padding-left: 20px;
   padding-right: 20px;
-  display: flex;
 }
 
-.lists {
-  font-size: 20px;
-  line-height: 50px;
-  padding-bottom: 10px;
+.like {
+  cursor: pointer;
 }
 
-.articles {
-  line-height: 50px;
+.modal {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
   background: #eee;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  width: 80%;
+}
+
+.click_img {
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
