@@ -103,7 +103,7 @@ function Modal() {
       <p>한줄 요약</p>
       <p>상세 내용</p>
     </div>
-  )
+  );
 }
 
 export default App;
