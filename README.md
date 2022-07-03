@@ -8,4 +8,4 @@
 
 ## [Cheat Sheet Web](https://hyungjinhan.github.io/simple_project/cheat_sheet/index.html)
 
-## [Simple React Blog](https://hyungjinhan.github.io/simple_project/react_web/blog/public/)
+## [Simple React Blog](https://hyungjinhan.github.io/simple_project/react_web/blog/public/index.html)
