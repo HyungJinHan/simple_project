@@ -87,7 +87,41 @@ function Create(props) {
           <textarea name="body" className='create_textarea' rows='15' placeholder='내용을 입력하세요.'></textarea>
         </p>
         <p>
-          <input type="submit" value="Create" className='create_submit' />
+          <input type="submit" value="Create" className='create_submit' onClick={()=>{
+            alert('새로운 메뉴가 만들어졌습니다.');
+          }} />
+        </p>
+      </form>
+    </article>
+  );
+}
+
+function Update(props) {
+  const [title, setTitle] = useState(props.title);
+  const [body, setBody] = useState(props.body);
+  return (
+    <article className='create_article'>
+      <h2>Update</h2>
+      <form onSubmit={(event) => {
+        event.preventDefault();
+        const title = event.target.title.value;
+        const body = event.target.body.value;
+        props.onUpdate(title, body);
+      }}>
+        <p>
+          <input type="text" name='title' className='update_input' placeholder='제목을 입력하세요.' value={title} onChange={(event)=>{
+            setTitle(event.target.value);
+          }} />
+        </p>
+        <p>
+          <textarea name="body" className='update_textarea' rows='15' placeholder='수정할 내용을 입력하세요.' value={body} onChange={(event)=>{
+            setBody(event.target.value);
+          }}></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Update" className='update_submit' onClick={()=>{
+            alert('내용이 수정되었습니다.');
+          }} />
         </p>
       </form>
     </article>
@@ -101,7 +135,7 @@ function App() {
   // const setMode = _mode[1];
   // 및의 코드와 같은 기능
 
-  const [mode, setMode] = useState('Read');
+  const [mode, setMode] = useState('Main');
   const [id, setId] = useState(null);
   const [nextId, setNextId] = useState(4);
 
@@ -122,7 +156,7 @@ function App() {
 
   let content = null;
   let contextControl = null;
-  if (mode === '개발자 Blog 추천') {
+  if (mode === 'Main') {
     content = 
     <Article
       title="개발자 Blog를 시작하려는 모두를 위해..."
@@ -144,7 +178,27 @@ function App() {
       >
       </Article>
     contextControl = 
-      <li><a href="/update" className='update_btn'>Update List</a></li>
+      <>
+        <li>
+          <a href={"/update/" + id} className='update_btn' onClick={(event)=>{
+            event.preventDefault();
+            setMode('Update')
+          }}>Update List</a>
+        </li>
+        <li>
+          <input type="button" value="Delete List" className='delete_btn' onClick={()=>{
+            alert("글을 삭제합니다.");
+            const newTopics = []
+            for (let i = 0; i < topics.length; i++) {
+              if (topics[i].id !== id) {
+                newTopics.push(topics[i]);
+              }
+            }
+            setTopics(newTopics);
+            setMode('Main');
+          }}/>
+        </li>
+      </>
   } else if (mode === 'Create') {
     content = <Create onCreate={(_title, _body)=>{
       const newTopic = {id:nextId, title:_title, body:_body}
@@ -155,12 +209,32 @@ function App() {
       setId(nextId);
       setNextId(nextId + 1);
     }}></Create>
+  } else if (mode === 'Update') {
+    let title, body = null;
+    for (let i = 0; i < topics.length; i++) {
+      if (topics[i].id === id) {
+        title = topics[i].title;
+        body = topics[i].body;
+      }
+    }
+    content = <Update title={title} body={body} onUpdate={(title, body)=>{
+      const newTopics = [...topics]
+      const updatedTopic = {id:id, title:title, body:body}
+      for (let i = 0; i < newTopics.length; i++) {
+        if (newTopics[i].id === id) {
+          newTopics[i] = updatedTopic;
+          break;
+        }
+      }
+      setTopics(newTopics);
+      setMode('Read');
+    }}></Update>
   }
 
   return (
     <div>
       <Header title="개발자 Blog 추천" onChangeMode={()=>{
-        setMode('개발자 Blog 추천');
+        setMode('Main');
         }}></Header>
       <Nav topics={topics} onChangeMode={(_id)=>{
         setMode('Read');

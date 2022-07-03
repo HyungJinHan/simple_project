@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+.h1_article {
+  white-space: pre-wrap;
+}
+
 ::selection {
   color: #424242;
   background-color: #bdbdbd;
@@ -99,6 +103,23 @@
   transition-duration: 0.5s;
 }
 
+.delete_btn {
+  color: black;
+  font-size: 18px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  padding-left: 1px;
+}
+
+.delete_btn:hover {
+  color: blue;
+  border: none;
+  font-weight: bolder;
+  transition-duration: 0.5s;
+}
+
 .create_input, .create_textarea {
   background: #eee;
   padding: 5px;
@@ -139,6 +160,49 @@
 }
 
 .create_article {
+  margin-left: 20px;
+}
+
+.update_input, .update_textarea {
+  background: #eee;
+  padding: 5px;
+  border-radius: 0.3em;
+  border: 0;
+  font-size: 20px;
+  transition-duration: 0.5s;
+  width: 90%;
+}
+
+.update_input:hover {
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.update_textarea:hover {
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.update_submit {
+  background: #eee;
+  padding: 5px;
+  border-radius: 0.3em;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  transition-duration: 0.5s;
+}
+
+.update_submit:hover {
+  font-weight: bolder;
+  transform: translateX(-0.5px) translateY(-0.2px);
+  box-shadow: 5px 5px 10px black;
+  transition-duration: 0.5s;
+}
+
+.update_article {
   margin-left: 20px;
 }
 
