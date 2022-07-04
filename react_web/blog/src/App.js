@@ -10,7 +10,7 @@ function Header(props) {
       <h1>
         <a href="/" onClick={(event)=>{
           event.preventDefault();
-          // click 후의 새로고침이 되지 않도록 막음
+          // click 후의 새로고침이 되지 않도록 지정
           props.onChangeMode();
         }}>
          {props.title}
