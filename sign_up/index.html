@@ -1,0 +1,82 @@
+<html lang="korean">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Input & Chart</title>
+</head>
+
+<body>
+    <table border="2">
+        <tr>
+            <th width="150px" height="30px">아이디</th>
+            <td width="500px"><input type="text" width="400" placeholder="6 ~ 10, 숫자와 알파벳만 사용" minlength="6"
+                    maxlength="10" size="30px" class="id" required></td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">비밀번호</th>
+            <td><input type="password" minlength="6" maxlength="10" size="30px" class="pw" required> (6 ~ 10, 숫자와 알파벳만
+                사용)</td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">비밀번호 확인</th>
+            <td><input type="password" minlength="6" maxlength="10" size="30px" class="pw_c" required> (6 ~ 10, 숫자와 알파벳만
+                사용)</td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">주민등록번호</th>
+            <td><input type="tel" maxlength="6" class="id_n"> - <input type="password" maxlength="7" class="id_n"
+                    required></td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">성별</th>
+            <td>
+                <input type="radio" id="man" name="gender"><label for="man"> 남자
+                    <input type="radio" id="woman" name="gender"><label for="woman"> 여자
+            </td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">전화번호</th>
+            <td>
+                <input type="tel" maxlength="3" size="5px" class="num" required> -
+                <input type="tel" maxlength="4" size="5px" class="num" required> -
+                <input type="tel" maxlength="4" size="5px" class="num" required>
+            </td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">이메일</th>
+            <td><input type="email" placeholder="이메일을 입력하세요." class="e_mail"> @
+                <select>
+                    <option value="" required>메일주소 선택</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="gmail.com">gmaidddddl.com</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th width="150px" height="30px">취미</th>
+            <td>
+                <input type="checkbox"> 등산
+                <input type="checkbox"> 영화
+                <input type="checkbox"> 운동
+                <input type="checkbox"> 독서
+                <input type="checkbox"> 음악
+                <input type="checkbox"> 게임
+            </td>
+        </tr>
+        <tr>
+            <th width="150px" height="150px">자기소개</th>
+            <td><textarea cols="80" rows="10" placeholder="자유롭게 자기소개를 해주세요." class="intro"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" width="150px" height="30px" align="center" class="btn">
+                <input type="button" value="입력">
+                <input type="button" value="취소">
+            </td>
+            <!-- <td>asd</td> -->
+        </tr>
+    </table>
+</body>
+
+</html>

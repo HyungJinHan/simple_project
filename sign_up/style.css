@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    background-color: #2f343e;
+}
+
+table {
+    margin: auto;
+    margin-top: 5em;
+    border-spacing: 15px;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+td {
+    border-radius: 0.3em;
+}
+
+th {
+    border-radius: 0.3em;
+}     
+
+.id {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.pw {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.pw_c {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.id_n {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.num {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.e_mail {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.intro {
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.3em;
+}
+
+.btn {
+    border: 0px;
+}
