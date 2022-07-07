@@ -6,21 +6,20 @@
     <title>Input & Chart</title>
     <script>
         function check_input() {
-            var str = document.input_form.id.value;
-            // 값 가져오기
+            var str = document.input_form.id.value; // 값 가져오기 (class는 안됨)
             if (str == '') {
-                alert('아이디를 입력하세요.');
+                alert('아이디를 입력하세요.'); // 아이디 공백 체크
                 document.input_form.id.focus();
                 return false;
-            } else if (str.length < 6 || str.length > 10) {
+            } else if (str.length < 6 || str.length > 10) { // 아이디 길이 체크
                 alert('아이디의 길이를 확인하세요 (6자리 ~ 10자리)');
                 document.input_form.id.focus();
                 return false;
             } else {
-                for (var i = 0; i < str.length; i++) {
+                for (var i = 0; i < str.length; i++) { // 아이디의 특수문자 체크
                     var chk = str.substring(i, i + 1);
                     if (!((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk >= '0' && chk <= '9'))) {
-                        // 영어 대소문자, 숫자 입력을 안했을 시
+                        // 영어 대소문자, 숫자 가 아닐 시
                         alert('아이디는 영어, 숫자만 입력이 가능합니다.');
                         document.input_form.id.focus();
                         return false;
@@ -29,19 +28,20 @@
                 document.input_form.pw.focus();
             }
 
-            var str1 = document.input_form.pw.value;
-            if (str1 == '') {
+            var str1 = document.input_form.pw.value; // 값 가져오기
+            if (str1 == '') { // 비밀번호 공백 체크
                 alert('비밀번호를 입력하세요.');
                 document.input_form.pw.focus();
                 return false;
-            } else if (str1.length < 6 || str1.length > 10) {
+            } else if (str1.length < 6 || str1.length > 10) { // 비밀번호 길이 체크
                 alert('비밀번호의 길이를 확인하세요 (6자리 ~ 10자리)');
                 document.input_form.pw.focus();
                 return false;
             } else {
-                for (var i = 0; i < str1.length; i++) {
+                for (var i = 0; i < str1.length; i++) { // 비밀번호 특수문자 체크
                     var chk = str1.substring(i, i + 1);
                     if (!((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk >= '0' && chk <= '9'))) {
+                        // 영어 대소문자, 숫자 가 아닐 시
                         alert('비밀번호는 영어, 숫자만 입력이 가능합니다.');
                         document.input_form.pw.focus();
                         return false;
@@ -49,15 +49,16 @@
                 };
                 document.input_form.pw_c.focus();
             }
-            var str2 = document.input_form.pw_c.value;
-            if (str1 !== str2) {
+
+            var str2 = document.input_form.pw_c.value; // 값 가져오기
+            if (str1 !== str2) { // 비밀번호와 비밀번호 확인이 일치하는지 체크
                 alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
                 return false;
             }
             document.input_form.id_n1.focus();
 
-            var str3 = document.input_form.id_n1.value;
-            var str4 = document.input_form.id_n2.value;
+            var str3 = document.input_form.id_n1.value; // 값 불러오기
+            var str4 = document.input_form.id_n2.value; // 값 불러오기
 
             let b1 = 2;
             let b2 = 8;
@@ -95,32 +96,31 @@
                 check_sub = 1;
             }
 
-            if (check_sub == str4.substring(6, 7)) {
+            if (check_sub == str4.substring(6, 7)) { // 주민번호 뒷자리 체크 디지트
 
             } else {
                 alert(`주민등록번호가 잘못되었습니다.`);
                 return false;
             }
 
-            var str5 = document.input_form.gender.value;
-
-            if (str5 == '') {
+            var str5 = document.input_form.gender.value; // 값 불러오기
+            if (str5 == '') { // radio 체크 여부 확인
                 alert('성별을 체크해주세요.');
                 document.input_form.man.focus();
                 return false;
             }
             document.input_form.num1.focus();
 
-            var str6 = document.input_form.num1.value;
-            var str7 = document.input_form.num2.value;
-            var str8 = document.input_form.num3.value;
+            var str6 = document.input_form.num1.value; // 값 불러오기
+            var str7 = document.input_form.num2.value; // 값 불러오기
+            var str8 = document.input_form.num3.value; // 값 불러오기
 
-            if (str6.length != 3 || str7.length != 4 || str8.length != 4) {
+            if (str6.length != 3 || str7.length != 4 || str8.length != 4) { // 전화번호 각각 길이 체크
                 alert('전화번호를 정확히 입력해주세요.');
                 document.input_form.str6.focus();
                 return false;
             } else {
-                for (var i = 0; i < str.length; i++) {
+                for (var i = 0; i < str.length; i++) { // 전화번호 앞이 숫자인지 체크
                     var chk = str6.substring(i, i + 1);
                     if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z')) {
                         alert('전화번호는 숫자만 입력할 수 있습니다.');
@@ -129,20 +129,20 @@
                     }
                 }
 
-                for (var i = 0; i < str.length; i++) {
+                for (var i = 0; i < str.length; i++) { // 전화번호 중간이 숫자인지 체크
                     var chk = str7.substring(i, i + 1);
                     if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z')) {
                         alert('전화번호는 숫자만 입력할 수 있습니다.');
-                        document.input_form.str6.focus();
+                        document.input_form.str7.focus();
                         return false;
                     }
                 }
 
-                for (var i = 0; i < str.length; i++) {
+                for (var i = 0; i < str.length; i++) { // 전화번호 뒤가 숫자인지 체크
                     var chk = str8.substring(i, i + 1);
                     if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z')) {
                         alert('전화번호는 숫자만 입력할 수 있습니다.');
-                        document.input_form.str6.focus();
+                        document.input_form.str8.focus();
                         return false;
                     }
                 }
@@ -150,13 +150,13 @@
 
             document.input_form.e_mail.focus();
 
-            var str9 = document.input_form.e_mail.value;
-            var str10 = document.input_form.eChk.value;
-            if (str9 == '') {
+            var str9 = document.input_form.e_mail.value; // 값 가져오기
+            var str10 = document.input_form.eChk.value; // 값 가져오기
+            if (str9 == '') { // 이메일 공백 체크
                 alert('이메일을 입력하세요.');
                 document.input_form.e_mail.focus();
                 return false;
-            } else if (str10 == '') {
+            } else if (str10 == '') { // 이메일 주소 체크 확인
                 alert('메일 주소를 선택하세요.');
                 document.input_form.eChk.focus();
                 return false;
@@ -165,6 +165,7 @@
             var str11 = document.input_form.chkBox;
 
             if ((str11[0].checked || str11[1].checked || str11[2].checked || str11[3].checked || str11[4].checked || str11[5].checked) == false) {
+                // 각각의 체크박스가 체크되어있지 않을 시
                 alert('취미를 하나 이상 선택하세요.');
                 return false;
             }
@@ -181,23 +182,25 @@
             //     return false;
             // }
 
-            var chk_res = [];
+            var chk_res = []; // 체크박스 배열 생성
 
-            for (var i = 0; i < str11.length; i++) {
+            for (var i = 0; i < str11.length; i++) { // 마지막에 정보 출력을 위해 체크박스 value 값 출력
                 if (str11[i].checked == true) {
                     chk_res = chk_res + str11[i].value + ' ';
+                    // 체크가 되어 있다면 배열에 하나씩 value 값을 추가
                 }
             }
 
             document.input_form.intro.focus();
 
-            var str17 = document.input_form.intro.value;
-            if (str17 == '') {
+            var str17 = document.input_form.intro.value; // 값 가져오기
+            if (str17 == '') { // 자기소개 공백 체크
                 alert('자기소개를 입력해주세요.');
                 document.input_form.intro.focus();
                 return false;
             }
 
+            // 마지막 정보 출력
             alert(`
             정보를 확인해주세요.
             입력한 아이디 : ${str}
