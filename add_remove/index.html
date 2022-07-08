@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_remove</title>
+    <!-- <script src="jquery-3.6.0.js"></script> -> 파일 다운로드 형식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#add').click(function (){
+                var name_val = $("#name").val();
+                var score_val = $("#score").val();
+
+                var row = `<tr><td>${name_val}</td><td>${score_val}</td><td><input type="button" value="Delete" class="rm"></td></tr>`;
+
+                if (name_val == '' && score_val == '') {
+                    alert('이름과 점수를 입력해주세요.');
+                    return false;
+                } else if (name_val == '') {
+                    alert('이름을 입력해주세요.');
+                    return false;
+                } else if (score_val == '') {
+                    alert('점수를 입력해주세요.');
+                    return false;
+                }
+
+                $('#result').append(row);
+                $('#name').val('');
+                $('#score').val('');
+    
+                $('#result').on('click', '.rm', function () {
+                    $(this).parent().parent().remove();
+                });
+            });
+        });
+    </script>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table align="center" border="2" id="board">
+        <tr>
+            <td width="100"><input type="text" id="name" size="7" placeholder="이름 입력"></td>
+            <td><input type="text" id="score" size="7" placeholder="점수 입력"></td>
+            <td><input type="button" id="add" value="입력하기"></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table align="center" border="2" id="result">
+        <tr>
+            <th width="100">이  름</th>
+            <th width="100">점  수</th>
+            <th width="55"></th>
+        </tr>
+    </table>
+    <!-- <button id="add">Create</button>
+    <table border="2" id='table'>
+    </table> -->
+</body>
+</html>
