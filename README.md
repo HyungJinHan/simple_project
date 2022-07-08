@@ -10,4 +10,6 @@
 
 ## [ID Number Check](https://hyungjinhan.github.io/simple_project/idNumber_check/index.html)
 
-## [Simple React Blog](https://hyungjinhan.github.io/simple_project/react_web/blog/public/index.html)
+## [Add & Remove](https://hyungjinhan.github.io/simple_project/add_remove/index.html)
+
+<!--[Simple React Blog](https://hyungjinhan.github.io/simple_project/react_web/blog/public/index.html) -->
