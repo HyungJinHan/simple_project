@@ -177,7 +177,7 @@
             } else {
                 for (var i = 0; i < str.length; i++) { // 전화번호 앞이 숫자인지 체크
                     var chk = str6.substring(i, i + 1);
-                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z')) {
+                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk == ' ')) {
                         alert('전화번호는 숫자만 입력할 수 있습니다.');
                         document.input_form.str6.focus();
                         return false;
@@ -186,7 +186,7 @@
 
                 for (var i = 0; i < str.length; i++) { // 전화번호 중간이 숫자인지 체크
                     var chk = str7.substring(i, i + 1);
-                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z')) {
+                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk == ' ')) {
                         alert('전화번호는 숫자만 입력할 수 있습니다.');
                         document.input_form.str7.focus();
                         return false;
@@ -195,7 +195,7 @@
 
                 for (var i = 0; i < str.length; i++) { // 전화번호 뒤가 숫자인지 체크
                     var chk = str8.substring(i, i + 1);
-                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z')) {
+                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk == ' ')) {
                         alert('전화번호는 숫자만 입력할 수 있습니다.');
                         document.input_form.str8.focus();
                         return false;
@@ -270,6 +270,8 @@
             입력한 전화번호 : ${str6} - ${str7} - ${str8}
             입력한 이메일 : ${str9}@${str10}
             선택한 취미 : ${chk_res}
+            <자기 소개>
+            ${str17}
             `);
         }
     </script>
