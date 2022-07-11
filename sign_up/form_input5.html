@@ -84,6 +84,7 @@
                 document.input_form.id.focus();
                 return false;
             } else if (str.length < 6 || str.length > 10) { // 아이디 길이 체크
+                // !/[A-Za-z0-9]{6,10}/
                 alert('아이디의 길이를 확인하세요 (6자리 ~ 10자리)');
                 document.input_form.id.focus();
                 return false;
@@ -92,6 +93,7 @@
                     var chk = str.substring(i, i + 1);
                     if (!((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk >= '0' && chk <= '9'))) {
                         // 영어 대소문자, 숫자 가 아닐 시
+                        // !/[A-Za-z0-9]/
                         alert('아이디는 영어, 숫자만 입력이 가능합니다.');
                         document.input_form.id.focus();
                         return false;
