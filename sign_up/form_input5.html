@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style3.css">
+    <title>Input & Chart</title>
+    <script>
+        window.onload = function () {
+            var input_1 = document.getElementById('id_n1');
+            var input_2 = document.getElementById('id_n2');
+            var input_3 = document.getElementById('num1');
+            var input_4 = document.getElementById('num2');
+            var input_5 = document.getElementById('num3');
+            var modal = document.getElementById('my_modal');
+            var btn = document.getElementById('modal_btn');
+            var span = document.getElementsByClassName('close_btn')[0];
+
+            btn.onclick = function (event) {
+                modal.style.display = 'block';
+            };
+
+            span.onclick = function (event) {
+                modal.style.display = 'none';
+            };
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+
+            input_1.onkeydown = function () {
+                if (6 <= input_1.value.length) {
+                    input_2.focus();
+                }
+            };
+
+            input_2.onkeydown = function () {
+                var event = event || window.event;
+                // 이벤트 객체 추출
+
+                if (event.keyCode == 8 && input_2.value.length == 0) {
+                    input_1.focus();
+                }
+            };
+
+            input_3.onkeydown = function () {
+                if (3 <= input_3.value.length) {
+                    input_4.focus();
+                }
+            };
+
+            input_4.onkeydown = function () {
+                var event = event || window.event;
+                // 이벤트 객체 추출
+                
+                if (event.keyCode == 8 && input_4.value.length == 0) {
+                    input_3.focus();
+                } else if (event.keyCode == 8 && 4 <= input_4.value.length) {
+                    // 작업 없음
+                } else if (4 <= input_4.value.length) {
+                    input_5.focus();
+                }
+            };
+
+            input_5.onkeydown = function () {
+                var event = event || window.event;
+                // 이벤트 객체 추출
+
+                if (event.keyCode == 8 && input_5.value.length == 0) {
+                    input_4.focus();
+                } else if (event.keyCode == 8 && 4 <= input_5.value.length) {
+                    // 작업 없음
+                } else if (4 <= input_5.value.length) {
+                    input_5.focus();
+                }
+            };
+        };
+        
+        function check_input() {
+            var str = document.input_form.id.value; // 값 가져오기 (class는 안됨)
+            if (str == '') {
+                alert('아이디를 입력하세요.'); // 아이디 공백 체크
+                document.input_form.id.focus();
+                return false;
+            } else if (str.length < 6 || str.length > 10) { // 아이디 길이 체크
+                alert('아이디의 길이를 확인하세요 (6자리 ~ 10자리)');
+                document.input_form.id.focus();
+                return false;
+            } else {
+                for (var i = 0; i < str.length; i++) { // 아이디의 특수문자 체크
+                    var chk = str.substring(i, i + 1);
+                    if (!((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk >= '0' && chk <= '9'))) {
+                        // 영어 대소문자, 숫자 가 아닐 시
+                        alert('아이디는 영어, 숫자만 입력이 가능합니다.');
+                        document.input_form.id.focus();
+                        return false;
+                    }
+                };
+                document.input_form.pw.focus();
+            }
+
+            var str1 = document.input_form.pw.value; // 값 가져오기
+            if (str1 == '') { // 비밀번호 공백 체크
+                alert('비밀번호를 입력하세요.');
+                document.input_form.pw.focus();
+                return false;
+            } else if (str1.length < 6 || str1.length > 10) { // 비밀번호 길이 체크
+                alert('비밀번호의 길이를 확인하세요 (6자리 ~ 10자리)');
+                document.input_form.pw.focus();
+                return false;
+            } else {
+                for (var i = 0; i < str1.length; i++) { // 비밀번호 특수문자 체크
+                    var chk = str1.substring(i, i + 1);
+                    if (!((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk >= '0' && chk <= '9'))) {
+                        // 영어 대소문자, 숫자 가 아닐 시
+                        alert('비밀번호는 영어, 숫자만 입력이 가능합니다.');
+                        document.input_form.pw.focus();
+                        return false;
+                    }
+                };
+                document.input_form.pw_c.focus();
+            }
+
+            var str2 = document.input_form.pw_c.value; // 값 가져오기
+            if (str1 !== str2) { // 비밀번호와 비밀번호 확인이 일치하는지 체크
+                alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
+                return false;
+            }
+            document.input_form.id_n1.focus();
+
+            var str3 = document.input_form.id_n1.value; // 값 불러오기
+            var str4 = document.input_form.id_n2.value; // 값 불러오기
+
+            let b1 = 2;
+            let b2 = 8;
+
+            var sum_1 = 0;
+            for (let i = 0; i <= 5; i++) {
+                var a1 = parseInt(str3[i]) * b1;
+                b1++;
+                sum_1 += a1;
+            }
+
+            var sum_2 = 0;
+            for (let i = 0; i < 6; i++) {
+                var a2 = parseInt(str4[i]) * b2;
+                b2++;
+                if (b2 == 10) {
+                    b2 = 2;
+                } else if (b2 == 11) {
+                    b2 = 3;
+                } else if (b2 == 12) {
+                    b2 = 4;
+                } else if (b2 == 13) {
+                    b2 = 5;
+                }
+                sum_2 += a2;
+            }
+
+            let check_num = (sum_1 + sum_2) % 11;
+
+            let check_sub = 11 - check_num;
+
+            if (check_sub == 10) {
+                check_sub = 0;
+            } else if (check_sub == 11) {
+                check_sub = 1;
+            }
+
+            if (check_sub == str4.substring(6, 7)) { // 주민번호 뒷자리 체크 디지트
+
+            } else {
+                alert(`주민등록번호가 잘못되었습니다.`);
+                return false;
+            }
+
+            var str5 = document.input_form.gender.value; // 값 불러오기
+            if (str5 == '') { // radio 체크 여부 확인
+                alert('성별을 체크해주세요.');
+                document.input_form.man.focus();
+                return false;
+            }
+            document.input_form.num1.focus();
+
+            var str6 = document.input_form.num1.value; // 값 불러오기
+            var str7 = document.input_form.num2.value; // 값 불러오기
+            var str8 = document.input_form.num3.value; // 값 불러오기
+
+            if (str6.length != 3 || str7.length != 4 || str8.length != 4) { // 전화번호 각각 길이 체크
+                alert('전화번호를 정확히 입력해주세요.');
+                document.input_form.str6.focus();
+                return false;
+            } else {
+                for (var i = 0; i < str.length; i++) { // 전화번호 앞이 숫자인지 체크
+                    var chk = str6.substring(i, i + 1);
+                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk == ' ')) {
+                        alert('전화번호는 숫자만 입력할 수 있습니다.');
+                        document.input_form.str6.focus();
+                        return false;
+                    }
+                }
+
+                for (var i = 0; i < str.length; i++) { // 전화번호 중간이 숫자인지 체크
+                    var chk = str7.substring(i, i + 1);
+                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk == ' ')) {
+                        alert('전화번호는 숫자만 입력할 수 있습니다.');
+                        document.input_form.str7.focus();
+                        return false;
+                    }
+                }
+
+                for (var i = 0; i < str.length; i++) { // 전화번호 뒤가 숫자인지 체크
+                    var chk = str8.substring(i, i + 1);
+                    if ((chk >= 'A' && chk <= 'Z') || (chk >= 'a' && chk <= 'z') || (chk == ' ')) {
+                        alert('전화번호는 숫자만 입력할 수 있습니다.');
+                        document.input_form.str8.focus();
+                        return false;
+                    }
+                }
+            }
+
+            document.input_form.e_mail.focus();
+
+            var str9 = document.input_form.e_mail.value; // 값 가져오기
+            var str10 = document.input_form.eChk.value; // 값 가져오기
+            if (str9 == '') { // 이메일 공백 체크
+                alert('이메일을 입력하세요.');
+                document.input_form.e_mail.focus();
+                return false;
+            } else if (str10 == '') { // 이메일 주소 체크 확인
+                alert('메일 주소를 선택하세요.');
+                document.input_form.eChk.focus();
+                return false;
+            }
+
+            var str11 = document.input_form.chkBox;
+
+            if ((str11[0].checked || str11[1].checked || str11[2].checked || str11[3].checked || str11[4].checked || str11[5].checked) == false) {
+                // 각각의 체크박스가 체크되어있지 않을 시
+                alert('취미를 하나 이상 선택하세요.');
+                return false;
+            }
+
+            // if (
+            //     str11[0].checked == false || 
+            //     str11[1].checked == false || 
+            //     str11[2].checked == false || 
+            //     str11[3].checked == false || 
+            //     str11[4].checked == false || 
+            //     str11[5].checked == false
+            //     ) {
+            //     alert('취미를 하나 이상 선택하세요.');
+            //     return false;
+            // }
+
+            var chk_res = []; // 체크박스 배열 생성
+
+            for (var i = 0; i < str11.length; i++) { // 마지막에 정보 출력을 위해 체크박스 value 값 출력
+                if (str11[i].checked == true) {
+                    chk_res = chk_res + str11[i].value + ' ';
+                    // 체크가 되어 있다면 배열에 하나씩 value 값을 추가
+                }
+            }
+
+            // if (chk_res == '') {
+            //     alert('취미를 하나 이상 선택하세요.');
+            //     return false;
+            // }
+
+            document.input_form.intro.focus();
+
+            var str17 = document.input_form.intro.value; // 값 가져오기
+            if (str17 == '') { // 자기소개 공백 체크
+                alert('자기소개를 입력해주세요.');
+                document.input_form.intro.focus();
+                return false;
+            }
+
+            // 마지막 정보 출력
+            alert(`
+            정보를 확인해주세요.
+            입력한 아이디 : ${str}
+            입력한 비밀번호 : ${str1}
+            입력한 주민등록번호 : ${str3} - ${str4}
+            선택한 성별 : ${str5}
+            입력한 전화번호 : ${str6} - ${str7} - ${str8}
+            입력한 이메일 : ${str9}@${str10}
+            선택한 취미 : ${chk_res}
+            <자기 소개>
+            ${str17}
+            `);
+        }
+    </script>
+</head>
+<body>
+    <button id="modal_btn">Open Sign Up</button>
+    <div id="my_modal" class="modal">
+        <div class="modal_content">
+            <span class="close_btn">&times;</span>
+            <form name="input_form" method="post">
+                <table border="2">
+                    <tr>
+                        <th width="150px" height="30px">아이디</th>
+                        <td width="500px"><input type="text" width="400" placeholder="6 ~ 10, 숫자와 알파벳만 사용" minlength="6"
+                                maxlength="10" size="30px" id="id" required autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">비밀번호</th>
+                        <td><input type="password" minlength="6" maxlength="10" size="30px" id="pw" required autocomplete="off"> (6 ~ 10, 숫자와 알파벳만
+                            사용)</td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">비밀번호 확인</th>
+                        <td><input type="password" minlength="6" maxlength="10" size="30px" id="pw_c" required autocomplete="off"> (6 ~ 10, 숫자와
+                            알파벳만
+                            사용)</td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">주민등록번호</th>
+                        <td><input type="tel" maxlength="6" id="id_n1" autocomplete="off"> - <input type="password" maxlength="7" id="id_n2" required autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">성별</th>
+                        <td>
+                            <input type="radio" id="man" name="gender" value="gender_chk"> 남자
+                            <input type="radio" id="woman" name="gender" value="gender_chk"> 여자
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">전화번호</th>
+                        <td>
+                            <input type="tel" maxlength="3" size="5px" id="num1" required autocomplete="off"> -
+                            <input type="tel" maxlength="4" size="5px" id="num2" required autocomplete="off"> -
+                            <input type="tel" maxlength="4" size="5px" id="num3" required autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">이메일</th>
+                        <td><input type="email" placeholder="이메일을 입력하세요." id="e_mail" autocomplete="off"> @
+                            <select id="eChk">
+                                <option value="" required>메일주소 선택</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="gmail.com">gmaidddddl.com</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="30px">취미</th>
+                        <td>
+                            <input type="checkbox" name="chkBox" value="등산"> 등산
+                            <input type="checkbox" name="chkBox" value="영화"> 영화
+                            <input type="checkbox" name="chkBox" value="운동"> 운동
+                            <input type="checkbox" name="chkBox" value="독서"> 독서
+                            <input type="checkbox" name="chkBox" value="음악"> 음악
+                            <input type="checkbox" name="chkBox" value="게임"> 게임
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="150px" height="150px">자기소개</th>
+                        <td><textarea cols="80" rows="10" placeholder="자유롭게 자기소개를 해주세요." id="intro" autocomplete="off"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width="150px" height="30px" align="center" class="btn">
+                            <input type="button" value="입력" onclick="check_input();">
+                            <input type="button" value="취소">
+                        </td>
+                        <!-- <td>asd</td> -->
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
