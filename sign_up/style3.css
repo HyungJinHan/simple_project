@@ -136,6 +136,7 @@ th {
     font-size: 30px;
     border-radius: 0.5em;
     border: 5px solid;
+    cursor: pointer;
 }
 
 #modal_btn:hover {
