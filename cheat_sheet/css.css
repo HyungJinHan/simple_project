@@ -77,9 +77,7 @@ a {
 }
 
 #page_h2 .h2_article:hover {
-    filter: drop-shadow(0 0 5px #ffffff)
-    drop-shadow(0 0 15px #6b6b6b)
-    drop-shadow(0 0 15px #a0a0a0);
+    filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 15px #6b6b6b) drop-shadow(0 0 15px #a0a0a0);
 }
 
 .container {
@@ -219,11 +217,19 @@ a {
     text-align: center;
 }
 
-.p_li2 a, .p_li1 a, .p_li4 a, .p_li5 a, .p_li6 a {
+.p_li2 a,
+.p_li1 a,
+.p_li4 a,
+.p_li5 a,
+.p_li6 a {
     color: black;
 }
 
-.p_li2, .p_li1, .p_li4, .p_li5, .p_li6 {
+.p_li2,
+.p_li1,
+.p_li4,
+.p_li5,
+.p_li6 {
     font-size: 20px;
     text-align: center;
     padding: 5px;
