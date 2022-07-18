@@ -28,22 +28,12 @@ function App() {
       <Counter />
       <br />
       <CounterReducer />
-      <button
-        className='InfoBtn'
-        onClick={() => {
-          setVisible1(!visible1);
-        }}
-      >
+      <button className='InfoBtn' onClick={() => { setVisible1(!visible1); }}>
         {visible1 ? 'InfoReducer 숨기기' : 'InfoReducer 보이기'}
       </button>
       <br />
       {visible1 && <InfoReducer />}
-      <button
-        className='InfoBtn'
-        onClick={() => {
-          setVisible(!visible);
-        }}
-      >
+      <button className='InfoBtn' onClick={() => { setVisible(!visible); }}>
         {visible ? 'Info 숨기기' : 'Info 보이기'}
       </button>
       {visible && <Info />}
