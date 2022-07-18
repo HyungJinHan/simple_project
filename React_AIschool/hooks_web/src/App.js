@@ -3,6 +3,7 @@ import './App.css';
 import Counter from './Counter';
 import Info from './Info';
 import { useState } from 'react';
+import CounterReducer from './CounterReducer';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       </header>
       <Counter />
       <br />
+      <CounterReducer />
       <button
         className='InfoBtn'
         onClick={() => {

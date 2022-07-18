@@ -20,19 +20,12 @@ const Info = () => {
         console.log('Effect');
         // input에 입력 값이 렌더링 될 때 마다 입력한 내용과 해당 내용이 함께 출력
         // mount가 완료된 시점에서 출력
-        // 1234 입력 시, 입력한 모든 값이 출력
-        console.log({
-            name,
-        });
-
-        // console.log(name);
 
         return () => {
-            console.log('Clean Up');
+            console.log('Unmount');
             // 입력한 값보다 한 단계 느리게 출력
-            console.log(name);
         };
-    }, [form.name]);
+    });
     // 원하는 값을 지정해서 리렌더링 하기
 
     const { name, eMail, nickname } = form;
