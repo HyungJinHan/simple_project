@@ -2,35 +2,11 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const Info = () => {
-    // const [name, setName] = useState('');
-    // const [nickname, setNickname] = useState('');
-
-    // const onChangeName = e => {
-    //     setName(e.target.value);
-    // };
-
-    // const onChangeNickname = e => {
-    //     setNickname(e.target.value);
-    // };
-
     const [form, setForm] = useState({
         name: '',
         nickname: '',
         eMail: ''
     });
-
-    useEffect(() => {
-        console.log('렌더링이 완료되었습니다.');
-        // input에 입력 값이 렌더링 될 때 마다 입력한 내용과 해당 내용이 함께 출력
-        // mount가 완료된 시점에서 출력
-        console.log({
-            name,
-            eMail,
-            nickname
-        });
-    });
-
-    const { name, eMail, nickname } = form;
 
     const onChange = e => {
         const nextForm = {
@@ -39,6 +15,27 @@ const Info = () => {
         }
         setForm(nextForm);
     };
+
+    useEffect(() => {
+        console.log('Effect');
+        // input에 입력 값이 렌더링 될 때 마다 입력한 내용과 해당 내용이 함께 출력
+        // mount가 완료된 시점에서 출력
+        // 1234 입력 시, 입력한 모든 값이 출력
+        console.log({
+            name,
+        });
+
+        // console.log(name);
+
+        return () => {
+            console.log('Clean Up');
+            // 입력한 값보다 한 단계 느리게 출력
+            console.log(name);
+        };
+    }, [form.name]);
+    // 원하는 값을 지정해서 리렌더링 하기
+
+    const { name, eMail, nickname } = form;
 
     return (
         <div className='Info'>

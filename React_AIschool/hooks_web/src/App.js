@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
 import Info from './Info';
+import { useState } from 'react';
 
 function App() {
+  const [visible, setVisible] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +24,15 @@ function App() {
       </header>
       <Counter />
       <br />
-      <Info />
+      <button
+        className='InfoBtn'
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {visible ? '숨기기' : '보이기'}
+      </button>
+      {visible && <Info />}
     </div>
   );
 }
