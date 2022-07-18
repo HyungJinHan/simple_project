@@ -19,13 +19,13 @@ button {
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,4 +101,16 @@ button {
   border-radius: 0.25em;
   padding: 10px;
   width: 300px;
+}
+
+.formInput tr {
+  text-align: center;
+}
+
+.formInput {
+  border: 5px solid #61dafb;
+  margin-bottom: 30px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 20px;
 }

@@ -34,9 +34,21 @@ const Info = () => {
         <div className='Info'>
             <h1><code>useState</code> 여러번 사용</h1>
             <div>
-                <input name='name' onChange={onChange} autoComplete='off' />
-                <input name='eMail' onChange={onChange} autoComplete='off' />
-                <input name='nickname' onChange={onChange} autoComplete='off' />
+                <input
+                    name='name'
+                    onChange={onChange}
+                    autoComplete='off'
+                />
+                <input
+                    name='eMail'
+                    onChange={onChange}
+                    autoComplete='off'
+                />
+                <input
+                    name='nickname'
+                    onChange={onChange}
+                    autoComplete='off'
+                />
             </div>
             <div>
                 <div>
