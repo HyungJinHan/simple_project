@@ -1,19 +1,27 @@
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
 
 const CounterReducer = () => {
+    const [state, dispatch] = useReducer(
+        reducer,
+        { value1: 0 }
+    );
+
+    useEffect(() => {
+        window.localStorage.setItem('value1', JSON.stringify(state.value1));
+    }, [state]);
 
     function reducer(state, action) {
         if (action.type === 'INCREASE') {
             return {
-                value: state.value + 1
+                value1: parseInt(JSON.parse(window.localStorage.getItem('value1'))) + 1
             };
         } else if (action.type === 'DECREASE') {
             return {
-                value: state.value - 1
+                value1: parseInt(JSON.parse(window.localStorage.getItem('value1'))) - 1
             };
         } else if (action.type === 'ZERO') {
             return {
-                value: state.value * 0
+                value1: parseInt(JSON.parse(window.localStorage.getItem('value1'))) * 0
             };
         } else {
             return state;
@@ -31,11 +39,6 @@ const CounterReducer = () => {
         //             return state;
         //     }
     }
-
-    const [state, dispatch] = useReducer(
-        reducer,
-        { value: 0 }
-    );
 
     const increase = () => {
         dispatch({
@@ -58,7 +61,7 @@ const CounterReducer = () => {
     return (
         <div className='Counter'>
             <p>
-                현재 카운터 값은 <b>{state.value}</b>입니다.
+                현재 카운터 값은 <b>{window.localStorage.getItem('value1')}</b>입니다.
             </p>
             <button onClick={increase}>+1</button>
             <button onClick={zero}>0</button>

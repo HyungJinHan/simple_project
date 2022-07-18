@@ -85,6 +85,7 @@ const FormInputReducer = () => {
 입력한 주민등록번호 : ${id_num1} - ${id_num2}
 입력한 전화번호 : ${tel1} - ${tel3} - ${tel3}
         `);
+        dispatch(initForm)
     }
 
     const onKeyPress1 = (e) => {

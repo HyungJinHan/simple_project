@@ -67,6 +67,14 @@ button {
   border-radius: 0.25em;
   padding: 10px;
   width: 80px;
+  background-color: #61dafb;
+  border-radius: 0.5em;
+  border: 5px solid #61dafb;
+}
+
+.Counter button:hover {
+  background-color: #282c34;
+  color: #61dafb;
 }
 
 .Info input {
@@ -98,9 +106,15 @@ button {
   margin-bottom: 20px;
   margin-bottom: 20px;
   background-color: #61dafb;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
+  border: 5px solid #61dafb;
   padding: 10px;
   width: 300px;
+}
+
+.InfoBtn:hover {
+  background-color: #282c34;
+  color: #61dafb;
 }
 
 .formInput tr {
@@ -113,4 +127,5 @@ button {
   margin-left: 30%;
   margin-right: 30%;
   padding: 20px;
+  border-radius: 1em;
 }
