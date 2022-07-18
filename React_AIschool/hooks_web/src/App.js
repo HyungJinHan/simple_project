@@ -4,9 +4,11 @@ import Counter from './Counter';
 import Info from './Info';
 import { useState } from 'react';
 import CounterReducer from './CounterReducer';
+import InfoReducer from './InfoReducer';
 
 function App() {
   const [visible, setVisible] = useState(false);
+  const [visible1, setVisible1] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
@@ -29,10 +31,20 @@ function App() {
       <button
         className='InfoBtn'
         onClick={() => {
+          setVisible1(!visible1);
+        }}
+      >
+        {visible1 ? 'InfoReducer 숨기기' : 'InfoReducer 보이기'}
+      </button>
+      <br />
+      {visible1 && <InfoReducer />}
+      <button
+        className='InfoBtn'
+        onClick={() => {
           setVisible(!visible);
         }}
       >
-        {visible ? '숨기기' : '보이기'}
+        {visible ? 'Info 숨기기' : 'Info 보이기'}
       </button>
       {visible && <Info />}
     </div>
