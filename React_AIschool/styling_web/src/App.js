@@ -1,6 +1,7 @@
 import logo from './sigongjoa.png';
 import './App.css';
 import SassComponent from './SassComponent';
+import CSSModule from './CSSModule';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </a>
       </header>
       <SassComponent />
+      <br />
+      <CSSModule />
+      <br />
     </div>
   );
 }

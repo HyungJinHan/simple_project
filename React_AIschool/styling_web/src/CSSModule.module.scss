@@ -1,0 +1,29 @@
+.wrapper {
+    background: black;
+    border: 20px solid black;
+    border-radius: 2rem;
+    padding: 5rem;
+    color: white;
+    font-size: 5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    &.inverted {
+        // inverted가 .wrapper와 함께 사용되었을 때만 적용
+        color: black;
+        background: white;
+        border: 20px solid black;
+        border-radius: 2rem;
+        padding: 5rem;
+        font-size: 5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+:global {
+    .something {
+        font-weight: 800;
+        color: aqua;
+    }
+}

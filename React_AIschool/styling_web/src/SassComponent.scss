@@ -1,26 +1,21 @@
-$red: #df0000d5;
-$orange: #eb6b02;
-$yellow: #fcc419;
-$green: #00a51e;
-$blue: #004cda;
-$indigo: #000cb4;
-$violet: #6e3dff;
-
-@mixin square($size) {
-    $calculated: 32px * $size;
-    width: $calculated;
-    height: $calculated;
-}
+@import './utils';
 
 .SassComponent {
     display: flex;
     padding: 100px;
+    padding-top: 0px;
+    background: #282c34;
+
+    @include media('<768px') {
+        background: white;
+    }
 
     .box {
         // background: red;
         cursor: pointer;
         transition: all 0.5s ease-in;
-        animation: App-logo-spin infinite 1s linear;
+        animation: App-logo-spin infinite 3s linear;
+        margin: auto;
 
         &.red {
             background: $red;
