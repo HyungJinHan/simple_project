@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+import logo from './sigongjoa.png';
 import './App.css';
+import SassComponent from './SassComponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <br />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <SassComponent />
     </div>
   );
 }
