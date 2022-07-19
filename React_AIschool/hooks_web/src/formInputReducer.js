@@ -140,7 +140,7 @@ const FormInputReducer = () => {
     return (
         <div className='formInput' align='center'>
 
-            <h1>이벤트 연습 (함수 컴포넌트)</h1>
+            <code><h1>useReducer 연습</h1></code>
             <br />
             <table border="5">
                 <tbody>

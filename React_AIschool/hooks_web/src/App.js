@@ -7,6 +7,7 @@ import CounterReducer from './CounterReducer';
 import InfoReducer from './InfoReducer';
 import img1 from './app.ico'
 import FormInputReducer from './formInputReducer';
+import Average from './Average';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -34,6 +35,9 @@ function App() {
       <CounterReducer />
       <br />
       <FormInputReducer />
+      <br />
+      <Average />
+      <br />
       <button className='InfoBtn' onClick={() => { setVisible1(!visible1); }}>
         {visible1 ? 'InfoReducer 숨기기' : 'InfoReducer 보이기'}
       </button>
