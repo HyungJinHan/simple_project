@@ -1,7 +1,7 @@
 import { useReducer, useRef } from 'react';
 // import './style3.css'
 
-const FormInputReducer = () => {
+const FormInputReducer1 = () => {
     const initForm = {
         id: '',
         pw: '',
@@ -17,14 +17,15 @@ const FormInputReducer = () => {
 
     const { id, pw, pw_c, id_num1, id_num2, tel1, tel2, tel3 } = state;
 
-    const inputFocus1 = useRef();
-    const inputFocus2 = useRef();
-    const inputFocus3 = useRef();
-    const inputFocus4 = useRef();
-    const inputFocus5 = useRef();
-    const inputFocus6 = useRef();
-    const inputFocus7 = useRef();
-    const inputFocus8 = useRef();
+    const inputFocus = useRef([])
+    // const inputFocus1 = useRef();
+    // const inputFocus2 = useRef();
+    // const inputFocus3 = useRef();
+    // const inputFocus4 = useRef();
+    // const inputFocus5 = useRef();
+    // const inputFocus6 = useRef();
+    // const inputFocus7 = useRef();
+    // const inputFocus8 = useRef();
 
     function formReducer(state, action) {
         if (action.name === 'btn') {
@@ -41,129 +42,82 @@ const FormInputReducer = () => {
         dispatch(e.target);
     }
 
-    const onClick1 = () => {
-        alert(
-            `입력한 ID 값 : ${id}`
-        );
-        inputFocus2.current.focus()
-    };
-
-    const onClick2 = () => {
-        alert(
-            `입력한 Password 값 : ${pw}`
-        );
-        inputFocus3.current.focus()
-    };
-
-    const onClick3 = () => {
-        alert(
-            `입력한 Password Comfirm 값 : ${pw_c}`
-        );
-        inputFocus4.current.focus()
-    };
-
-    const onClick4 = () => {
-        alert(
-            `입력한 First ID Number 값 : ${id_num1}`
-        );
-        inputFocus5.current.focus()
-    };
-
-    const onClick5 = () => {
-        alert(
-            `입력한 Second ID Number 값 : ${id_num2}`
-        );
-        inputFocus6.current.focus()
-    };
-
-    const onClick6 = () => {
-        alert(
-            `입력한 First Telphone Number 값 : ${tel1}`
-        );
-        inputFocus7.current.focus()
-    };
-
-    const onClick7 = () => {
-        alert(
-            `입력한 Second Telphone Number 값 : ${tel2}`
-        );
-        inputFocus8.current.focus()
-    };
-
-    const onClick8 = () => {
-        alert(
-            `입력한 Third Telphone Number 값 : ${tel3}`
-        );
-        alert(`
+    const onKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            if (e.target.name === "id") {
+                alert(
+                    `입력한 ID 값 : ${id}`
+                );
+                inputFocus.current[1].focus()
+            } else if (e.target.name === "pw") {
+                alert(
+                    `입력한 Password 값 : ${pw}`
+                );
+                inputFocus.current[2].focus()
+            } else if (e.target.name === "pw_c") {
+                alert(
+                    `입력한 Password Comfirm 값 : ${pw_c}`
+                );
+                inputFocus.current[3].focus()
+            } else if (e.target.name === "id_num1") {
+                alert(
+                    `입력한 First ID Number 값 : ${id_num1}`
+                );
+                inputFocus.current[4].focus()
+            } else if (e.target.name === "id_num2") {
+                alert(
+                    `입력한 Second ID Number 값 : ${id_num2}`
+                );
+                inputFocus.current[5].focus()
+            } else if (e.target.name === "tel1") {
+                alert(
+                    `입력한 First Telphone Number 값 : ${tel1}`
+                );
+                inputFocus.current[6].focus()
+            } else if (e.target.name === "tel2") {
+                alert(
+                    `입력한 First Telphone Number 값 : ${tel2}`
+                );
+                inputFocus.current[7].focus()
+            } else if (e.target.name === "tel3") {
+                alert(
+                    `입력한 Third Telphone Number 값 : ${tel3}`
+                );
+                alert(`
 입력한 아이디 : ${id}
 입력한 비밀번호 : ${pw}
 입력한 주민등록번호 : ${id_num1} - ${id_num2}
 입력한 전화번호 : ${tel1} - ${tel3} - ${tel3}
-        `);
-        inputFocus1.current.focus()
-        inputFocus1.current.value = '';
-        inputFocus2.current.value = '';
-        inputFocus3.current.value = '';
-        inputFocus4.current.value = '';
-        inputFocus5.current.value = '';
-        inputFocus6.current.value = '';
-        inputFocus7.current.value = '';
-        inputFocus8.current.value = '';
+                `);
+                inputFocus.current[0].focus();
+                inputFocus.current[0].value = '';
+                inputFocus.current[1].value = '';
+                inputFocus.current[2].value = '';
+                inputFocus.current[3].value = '';
+                inputFocus.current[4].value = '';
+                inputFocus.current[5].value = '';
+                inputFocus.current[6].value = '';
+                inputFocus.current[7].value = '';
+            }
+        }
+    };
+
+
+    const onClick = () => {
+        alert(`
+    입력한 아이디 : ${id}
+    입력한 비밀번호 : ${pw}
+    입력한 주민등록번호 : ${id_num1} - ${id_num2}
+    입력한 전화번호 : ${tel1} - ${tel3} - ${tel3}
+            `);
+        inputFocus.current[0].focus();
+
     }
-
-    const onKeyPress1 = (e) => {
-        if (e.key === 'Enter') {
-            onClick1();
-        }
-    };
-
-    const onKeyPress2 = (e) => {
-        if (e.key === 'Enter') {
-            onClick2();
-        }
-    };
-
-    const onKeyPress3 = (e) => {
-        if (e.key === 'Enter') {
-            onClick3();
-        }
-    };
-
-    const onKeyPress4 = (e) => {
-        if (e.key === 'Enter') {
-            onClick4();
-        }
-    };
-
-    const onKeyPress5 = (e) => {
-        if (e.key === 'Enter') {
-            onClick5();
-        }
-    };
-
-    const onKeyPress6 = (e) => {
-        if (e.key === 'Enter') {
-            onClick6();
-        }
-    };
-
-    const onKeyPress7 = (e) => {
-        if (e.key === 'Enter') {
-            onClick7();
-        }
-    };
-
-
-    const onKeyPress8 = (e) => {
-        if (e.key === 'Enter') {
-            onClick8();
-        }
-    };
 
     return (
         <div className='formInput' align='center'>
 
-            <code><h1>useReducer 연습 (노가다)</h1></code>
+            <code><h1>useReducer 연습 (if문)</h1></code>
             <br />
             <table border="5">
                 <tbody>
@@ -180,8 +134,8 @@ const FormInputReducer = () => {
                                 size="30"
                                 value={id}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress1}
-                                ref={inputFocus1}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[0] = e)}
                                 required autoComplete="off"
                             />
                         </td>
@@ -199,8 +153,8 @@ const FormInputReducer = () => {
                                 size="30"
                                 value={pw}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress2}
-                                ref={inputFocus2}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[1] = e)}
                                 required autoComplete="off"
                             />
                         </td>
@@ -218,8 +172,8 @@ const FormInputReducer = () => {
                                 size="30"
                                 value={pw_c}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress3}
-                                ref={inputFocus3}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[2] = e)}
                                 required autoComplete="off"
                             />
                         </td>
@@ -235,8 +189,8 @@ const FormInputReducer = () => {
                                 placeholder="6자리 숫자만 사용"
                                 value={id_num1}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress4}
-                                ref={inputFocus4}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[3] = e)}
                                 autoComplete="off" />
                             &nbsp;&nbsp;-&nbsp;&nbsp;
                             <input
@@ -247,8 +201,8 @@ const FormInputReducer = () => {
                                 placeholder="7자리 숫자만 사용"
                                 value={id_num2}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress5}
-                                ref={inputFocus5}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[4] = e)}
                                 required autoComplete="off"
                             />
                         </td>
@@ -265,8 +219,8 @@ const FormInputReducer = () => {
                                 placeholder="3자리 숫자"
                                 value={tel1}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress6}
-                                ref={inputFocus6}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[5] = e)}
                                 required autoComplete="off"
                             />
                             &nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp;
@@ -278,8 +232,8 @@ const FormInputReducer = () => {
                                 placeholder="4자리 숫자"
                                 value={tel2}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress7}
-                                ref={inputFocus7}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[6] = e)}
                                 required autoComplete="off"
                             />
                             &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
@@ -290,8 +244,8 @@ const FormInputReducer = () => {
                                 placeholder="4자리 숫자"
                                 value={tel3}
                                 onChange={onChange}
-                                onKeyPress={onKeyPress8}
-                                ref={inputFocus8}
+                                onKeyPress={onKeyPress}
+                                ref={(e) => (inputFocus.current[7] = e)}
                                 required autoComplete="off"
                             />
                         </td>
@@ -299,9 +253,13 @@ const FormInputReducer = () => {
                 </tbody>
             </table>
             <br /><br />
-            <button name='btn' onClick={onClick8}>확인</button>
+            <button
+                name='btn'
+                onKeyPress={onKeyPress}
+                onClick={onClick}
+            >확인</button>
         </div>
     );
 }
 
-export default FormInputReducer;
+export default FormInputReducer1;
