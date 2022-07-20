@@ -2,6 +2,7 @@ import logo from './sigongjoa.png';
 import './App.css';
 import SassComponent from './SassComponent';
 import CSSModule from './CSSModule';
+import StyledComponent from './StyledComponent';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <SassComponent />
       <br />
       <CSSModule />
+      <br /><br />
+      <StyledComponent />
       <br />
     </div>
   );
