@@ -1,0 +1,127 @@
+.ToDoInsert {
+    display: flex;
+    text-align: center;
+    // background: #495057;
+
+    input {
+        background-color: #e0e0e0;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 15px;
+        width: 80%;
+        border-radius: 1em;
+
+        &::placeholder {
+            color: #bbbbbb;
+        }
+
+        flex: 1;
+    }
+
+    .email {
+        background-color: #e0e0e0;
+        outline: none;
+        border: none;
+        // padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 15px;
+        width: 36%;
+
+        &::placeholder {
+            color: #bbbbbb;
+        }
+
+        flex: 1;
+    }
+
+    .email_sel {
+        background-color: #e0e0e0;
+        margin: auto;
+        outline: none;
+        border: none;
+        // padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 32px;
+        width: 38%;
+        border-radius: 1em;
+        cursor: pointer;
+
+        &::placeholder {
+            color: #bbbbbb;
+        }
+
+        flex: 1;
+    }
+
+    .gender_man {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .man {
+        display: inline-block;
+        width: 10%;
+    }
+
+    .gender_woman {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .woman {
+        display: inline-block;
+        width: 10%;
+    }
+
+    th {
+        height: 40px;
+        border: 3px solid #868e96;
+        border-radius: 0.7em;
+        background: white;
+    }
+
+    td {
+        height: 40px;
+        border: 3px solid #868e96;
+        padding-left: 15px;
+        border-radius: 0.7em;
+        background: white;
+    }
+}
+
+td .genders {
+    padding-left: 1px;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    background: #3A1D1D;
+    color: white;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    font-size: 1.5rem;
+    display: block;
+    // align-items: center;
+    cursor: pointer;
+    transition: 0.3s background ease-in;
+
+    &:hover {
+        background: #693327;
+    }
+}
