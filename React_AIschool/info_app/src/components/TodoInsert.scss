@@ -1,0 +1,90 @@
+.TodoInsert {
+    // display: flex;
+    // background: white;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+    text-align: center;
+
+    input {
+        background: white;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        width: 90%;
+
+        &::placeholder {
+            color: #bbbbbb;
+        }
+
+        flex: 1;
+    }
+
+    .email {
+        background: white;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        width: 39.5%;
+
+        &::placeholder {
+            color: #bbbbbb;
+        }
+
+        flex: 1;
+    }
+
+    select {
+        height: 43.5px;
+    }
+}
+
+.gender {
+    background: white;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #3A1D1D;
+    display: inline-flex;
+    // width: 90%;
+}
+
+.genders {
+    align-items: center;
+}
+
+.submit_button {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    width: 10%;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    background: #3A1D1D;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s backgound ease-in;
+
+    &:hover {
+        background: #683f3f;
+    }
+}

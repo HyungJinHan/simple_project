@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // React의 내장 함수인 useState를 Import함
 import logo from './logo.svg';
 import './App.css';
@@ -8,12 +8,12 @@ function Header(props) {
   return (
     <header className='black_h1'>
       <h1>
-        <a href="/" onClick={(event)=>{
+        <a href="/" onClick={(event) => {
           event.preventDefault();
           // click 후의 새로고침이 되지 않도록 지정
           props.onChangeMode();
         }}>
-         {props.title}
+          {props.title}
         </a>
       </h1>
     </header>
@@ -24,25 +24,25 @@ function Nav(props) {
   const lists = []
   // lists라는 변수를 배열로 지정
 
-  for(let i = 0; i < props.topics.length; i++) {
+  for (let i = 0; i < props.topics.length; i++) {
     let t = props.topics[i];
     lists.push(
-    <li key={t.id}>
-      <a id={t.id} href={'/read/'+t.id} onClick={(event)=>{
-        event.preventDefault();
-        props.onChangeMode(Number(event.target.id));
-        // 여기서의 key 값으로 지정된 숫자는 문자열로써 key가 지정되었기 때문에
-        // Number 함수를 사용해서 숫자로 변환을 해주면 오류가 사라짐
-      }}>
-      {/*
+      <li key={t.id}>
+        <a id={t.id} href={'/read/' + t.id} onClick={(event) => {
+          event.preventDefault();
+          props.onChangeMode(Number(event.target.id));
+          // 여기서의 key 값으로 지정된 숫자는 문자열로써 key가 지정되었기 때문에
+          // Number 함수를 사용해서 숫자로 변환을 해주면 오류가 사라짐
+        }}>
+          {/*
       click을 통해 각각의 id를 출력하기 위해서 a 태그에 직접 id를 부여해주고,
       event 객체가 가지고 있는 target(이벤트를 유발시킨 태그인 a)이라는 기능과
       .id(event.target.id)를 props인 onChangeMode 함수에 지정해주면,
       클릭했을 시, 해당 list의 id 값을 얻을 수 있음
       */}
-       {t.title}
-      </a>
-    </li>
+          {t.title}
+        </a>
+      </li>
     );
   }
   // for 문을 이용해 list들을 생성해주고, lists의 배열에 push해주는 작업을
@@ -64,17 +64,17 @@ function Article(props) {
       <h2>
         {props.title}
       </h2>
-      {props.body}<br/>
+      {props.body}<br />
       {props.body1}
     </article>
-  ); 
+  );
 }
 
 function Create(props) {
   return (
     <article className='create_article'>
       <h2>Create</h2>
-      <form onSubmit={(event)=>{
+      <form onSubmit={(event) => {
         event.preventDefault();
         const title = event.target.title.value;
         const body = event.target.body.value;
@@ -87,7 +87,7 @@ function Create(props) {
           <textarea name="body" className='create_textarea' rows='15' placeholder='내용을 입력하세요.'></textarea>
         </p>
         <p>
-          <input type="submit" value="Create" className='create_submit' onClick={()=>{
+          <input type="submit" value="Create" className='create_submit' onClick={() => {
             alert('새로운 메뉴가 만들어졌습니다.');
           }} />
         </p>
@@ -109,17 +109,17 @@ function Update(props) {
         props.onUpdate(title, body);
       }}>
         <p>
-          <input type="text" name='title' className='update_input' placeholder='제목을 입력하세요.' value={title} onChange={(event)=>{
+          <input type="text" name='title' className='update_input' placeholder='제목을 입력하세요.' value={title} onChange={(event) => {
             setTitle(event.target.value);
           }} />
         </p>
         <p>
-          <textarea name="body" className='update_textarea' rows='15' placeholder='수정할 내용을 입력하세요.' value={body} onChange={(event)=>{
+          <textarea name="body" className='update_textarea' rows='15' placeholder='수정할 내용을 입력하세요.' value={body} onChange={(event) => {
             setBody(event.target.value);
           }}></textarea>
         </p>
         <p>
-          <input type="submit" value="Update" className='update_submit' onClick={()=>{
+          <input type="submit" value="Update" className='update_submit' onClick={() => {
             alert('내용이 수정되었습니다.');
           }} />
         </p>
@@ -151,18 +151,18 @@ function App() {
     {
       id: 3, title: 'GitHub Blog를 사용할까?',
       body: 'GitHub Blog의 장점과 단점\n\n장점\n1. 기본적인 코딩에 능숙하다면 커스텀의 자유도가 굉장히 높다.\n2. 포스팅의 주제가 자유롭다.\n3. 커뮤니티의 성격보다는 개인적인 정리 사이트의 느낌이다.\n\n단점\n1. 높은 진입장벽으로 준비 단계가 고통스럽다.\n2. 관리자 모드의 부재로, Blog의 다양한 통계 정보를 확인할 수 없다.\n3. 댓글 등의 기능이 존재하지 않아, 별도의 플러그인을 설치해야 한다.'
-  }
+    }
   ]);
 
   let content = null;
   let contextControl = null;
   if (mode === 'Main') {
-    content = 
-    <Article
-      title="개발자 Blog를 시작하려는 모두를 위해..."
-      body="어떤 플랫폼을 사용해야 하는지의 나름대로의 정보들을 정리해놓은 블로그."
-      body1="각각의 플랫폼의 장점과 단점을 정리했습니다."
-    ></Article>
+    content =
+      <Article
+        title="개발자 Blog를 시작하려는 모두를 위해..."
+        body="어떤 플랫폼을 사용해야 하는지의 나름대로의 정보들을 정리해놓은 블로그."
+        body1="각각의 플랫폼의 장점과 단점을 정리했습니다."
+      ></Article>
   } else if (mode === 'Read') {
     let title, body = null;
     for (let i = 0; i < topics.length; i++) {
@@ -177,16 +177,16 @@ function App() {
         body={body}
       >
       </Article>
-    contextControl = 
+    contextControl =
       <>
         <li>
-          <a href={"/update/" + id} className='update_btn' onClick={(event)=>{
+          <a href={"/update/" + id} className='update_btn' onClick={(event) => {
             event.preventDefault();
             setMode('Update')
           }}>Update List</a>
         </li>
         <li>
-          <input type="button" value="Delete List" className='delete_btn' onClick={()=>{
+          <input type="button" value="Delete List" className='delete_btn' onClick={() => {
             alert("글을 삭제합니다.");
             const newTopics = []
             for (let i = 0; i < topics.length; i++) {
@@ -196,12 +196,12 @@ function App() {
             }
             setTopics(newTopics);
             setMode('Main');
-          }}/>
+          }} />
         </li>
       </>
   } else if (mode === 'Create') {
-    content = <Create onCreate={(_title, _body)=>{
-      const newTopic = {id:nextId, title:_title, body:_body}
+    content = <Create onCreate={(_title, _body) => {
+      const newTopic = { id: nextId, title: _title, body: _body }
       const newTopics = [...topics]
       newTopics.push(newTopic);
       setTopics(newTopics);
@@ -217,9 +217,9 @@ function App() {
         body = topics[i].body;
       }
     }
-    content = <Update title={title} body={body} onUpdate={(title, body)=>{
+    content = <Update title={title} body={body} onUpdate={(title, body) => {
       const newTopics = [...topics]
-      const updatedTopic = {id:id, title:title, body:body}
+      const updatedTopic = { id: id, title: title, body: body }
       for (let i = 0; i < newTopics.length; i++) {
         if (newTopics[i].id === id) {
           newTopics[i] = updatedTopic;
@@ -233,10 +233,10 @@ function App() {
 
   return (
     <div>
-      <Header title="개발자 Blog 추천" onChangeMode={()=>{
+      <Header title="개발자 Blog 추천" onChangeMode={() => {
         setMode('Main');
-        }}></Header>
-      <Nav topics={topics} onChangeMode={(_id)=>{
+      }}></Header>
+      <Nav topics={topics} onChangeMode={(_id) => {
         setMode('Read');
         setId(_id);
       }}></Nav>
@@ -247,7 +247,7 @@ function App() {
         }}>Create List</a></li>
         {contextControl}
       </ul>
-        {content}
+      {content}
     </div>
   );
 }
