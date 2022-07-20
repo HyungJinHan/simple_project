@@ -59,6 +59,12 @@ const TodoInsert = ({ onInsert }) => {
     //     setValue(nextValue);
     // });
 
+const onKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            onSubmit();
+        }
+    };
+
     const onSubmit = useCallback(
         (e) => {
             onInsert(
@@ -81,7 +87,7 @@ const TodoInsert = ({ onInsert }) => {
         }, [onInsert, id, pw, email, email_sel, gender]);
 
     return (
-        <form className='TodoInsert' onSubmit={onSubmit}>
+        <form className='TodoInsert' onKeyPress={onKeyPress}>
             <input
                 placeholder='아이디를 입력하세요.'
                 value={id}
@@ -137,7 +143,7 @@ const TodoInsert = ({ onInsert }) => {
                 value4={value}
                 onChange={onChange5}
             /> */}
-            <div className='submit_button'>
+            <div className='submit_button' onSubmit={onSubmit}>
                 <button>
                     <MdAdd />
                 </button>
