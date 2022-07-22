@@ -1,0 +1,22 @@
+.InfoInsert {
+    display: flex;
+    background: #e0e0e0;
+    padding: 30px;
+
+    input {
+        background: white;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        border-radius: 0.5rem;
+        color: black;
+
+        &::placeholder {
+            color: #969696;
+        }
+
+        flex: 1;
+    }
+}
