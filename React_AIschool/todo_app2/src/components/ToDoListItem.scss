@@ -7,33 +7,106 @@
         background: #f8f9fa;
     }
 
-    .checkbox {
-        cursor: pointer;
+    input {
+        background-color: #e0e0e0;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 15px;
+        width: 80%;
+        border-radius: 1em;
+
+        &::placeholder {
+            color: #bbbbbb;
+        }
+
         flex: 1;
-        display: flex;
-        align-items: center;
+    }
 
-        // 세로 중앙 정렬
-        svg {
-            font-size: 1.5rem;
+    .email {
+        background-color: #e0e0e0;
+        outline: none;
+        border: none;
+        // padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 15px;
+        width: 36%;
+
+        &::placeholder {
+            color: #bbbbbb;
         }
 
-        .text {
-            margin-left: 0.5rem;
-            flex: 1;
+        flex: 1;
+    }
+
+    .email_sel {
+        background-color: #e0e0e0;
+        margin: auto;
+        outline: none;
+        border: none;
+        // padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 32px;
+        width: 38%;
+        border-radius: 1em;
+        cursor: pointer;
+
+        &::placeholder {
+            color: #bbbbbb;
         }
 
-        &.checked {
-            svg {
-                color: #22b8cf;
-            }
+        flex: 1;
+    }
 
-            .text {
-                color: #ff7474;
-                text-decoration: line-through;
-            }
+    .gender {
+        background-color: #e0e0e0;
+        margin: auto;
+        outline: none;
+        border: none;
+        // padding: 0.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #3A1D1D;
+        display: inline-block;
+        height: 32px;
+        width: 38%;
+        border-radius: 1em;
+        cursor: pointer;
 
+        &::placeholder {
+            color: #bbbbbb;
         }
+
+        flex: 1;
+    }
+
+    th {
+        height: 40px;
+        border: 3px solid #868e96;
+        border-radius: 0.7em;
+        background: white;
+    }
+
+    td {
+        height: 40px;
+        border: 3px solid #868e96;
+        padding-left: 15px;
+        border-radius: 0.7em;
+        background: white;
     }
 
     .remove {
@@ -51,5 +124,29 @@
     // 엘리먼트 사이에 테두리를 넣음
     &+& {
         border-top: 1px solid #dee2e6;
+    }
+
+    button {
+        background: none;
+        outline: none;
+        border: none;
+        background: #3A1D1D;
+        color: white;
+        // padding-left: 1rem;
+        // padding-right: 1rem;
+        font-size: 1.5rem;
+        display: block;
+        // align-items: center;
+        cursor: pointer;
+        transition: 0.3s background ease-in;
+        border-radius: 0.5em;
+
+        &:hover {
+            background: #693327;
+        }
+    }
+
+    table {
+        border: none;
     }
 }

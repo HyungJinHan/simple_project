@@ -55,18 +55,40 @@ const ToDoInsert = ({ onInsert }) => {
     const onSubmit = useCallback(
         (e) => {
             onInsert(
-                <table border="2">
+                <table>
                     <tbody>
                         <tr>
                             <th width="200px" height="30px">아이디</th>
                             <td width="500px">
                                 {id}
+                                {/* <input
+                                    type="text"
+                                    width="400"
+                                    name="id"
+                                    placeholder="6 ~ 10, 숫자와 알파벳만 사용"
+                                    minLength="6"
+                                    maxLength="10"
+                                    size="30"
+                                    value={id}
+                                    required autoComplete="off"
+                                /> */}
                             </td>
                         </tr>
                         <tr>
                             <th width="150px" height="30px">비밀번호</th>
                             <td>
                                 {pw}
+                                {/* <input
+                                    type="password"
+                                    width="400"
+                                    name="pw"
+                                    placeholder="6 ~ 10, 숫자와 알파벳만 사용"
+                                    minLength="6"
+                                    maxLength="10"
+                                    size="30"
+                                    value={pw}
+                                    required autoComplete="off"
+                                /> */}
                             </td>
                         </tr>
                         <tr>
@@ -75,12 +97,37 @@ const ToDoInsert = ({ onInsert }) => {
                                 {email}
                                 @
                                 {email_sel}
+                                {/* <input
+                                    className='email'
+                                    placeholder='이메일을 입력하세요.'
+                                    value={email}
+                                />
+                                &nbsp;@&nbsp;
+                                <select
+                                    className='email_sel'
+                                    name='email_sel'
+                                    value={email_sel}
+                                >
+                                    <option value="">메일 주소 선택</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="nate.com">nate.com</option>
+                                </select> */}
                             </td>
                         </tr>
                         <tr>
                             <th width="150px" height="30px">성별</th>
                             <td>
                                 {gender}
+                                {/* <select
+                                    className='gender'
+                                    name='gender'
+                                    value={gender}
+                                >
+                                    <option value="">성별 선택</option>
+                                    <option value="남자">남자</option>
+                                    <option value="여자">여자</option>
+                                </select> */}
                             </td>
                         </tr>
                     </tbody>
@@ -96,7 +143,7 @@ const ToDoInsert = ({ onInsert }) => {
             setPw('');
             setEmail('');
             setEmail_sel('');
-            setGender(false);
+            setGender('');
             e.preventDefault();
             // submit을 클릭할 시 새로고침 방지
         }, [onInsert, id, pw, email, email_sel, gender]);
@@ -173,7 +220,7 @@ const ToDoInsert = ({ onInsert }) => {
                     <tr>
                         <th width="150px" height="30px">성별</th>
                         <td className='genders'>
-                            <input
+                            {/* <input
                                 type='radio'
                                 name='gender'
                                 value='남자'
@@ -186,7 +233,17 @@ const ToDoInsert = ({ onInsert }) => {
                                 value='여자'
                                 className='gender_woman'
                                 onChange={onChange5}
-                            /><p className='woman'>여자</p>
+                            /><p className='woman'>여자</p> */}
+                            <select
+                                className='gender'
+                                name='gender'
+                                value={gender}
+                                onChange={onChange5}
+                            >
+                                <option value="">성별 선택</option>
+                                <option value="남자">남자</option>
+                                <option value="여자">여자</option>
+                            </select>
                         </td>
                     </tr>
                 </tbody>

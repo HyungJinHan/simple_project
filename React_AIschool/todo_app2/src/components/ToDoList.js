@@ -2,7 +2,7 @@ import React from 'react';
 import ToDoListItem from './ToDoListItem';
 import './ToDoList.scss'
 
-const ToDoList = ({ todos, onRemove, onToggle }) => {
+const ToDoList = ({ todos, onRemove, onUpdate }) => {
     return (
         <div className='ToDoList'>
             {todos.map(todo => (
@@ -10,12 +10,10 @@ const ToDoList = ({ todos, onRemove, onToggle }) => {
                     todo={todo}
                     key={todo.id}
                     onRemove={onRemove}
-                // onToggle={onToggle}
+                    onUpdate={onUpdate}
                 />
             ))}
             {/* 배열의 개수만큼 반복 (map) */}
-            <br /><br />
-            <hr />
         </div>
     );
 };
