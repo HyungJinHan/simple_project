@@ -1,0 +1,29 @@
+.ToDoTemplate {
+    width: 513px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .app-title {
+        background: #61dafb;
+        color: #282c34;
+        height: 4rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .content {
+        background: white;
+        color: #282c34;
+        // padding: 10px;
+        font-size: 20px;
+    }
+}
